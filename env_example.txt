@@ -1,0 +1,9 @@
+# DeepSeek API配置
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+
+# Tushare配置
+TUSHARE_TOKEN=your_tushare_token_here
+
+# 可选：修改推送时间（格式：HH:MM）
+DAILY_REPORT_TIME=08:00
+
