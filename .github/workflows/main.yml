@@ -1,0 +1,192 @@
+name: 📊 每日股票分析
+
+on:
+  # 定时触发：每天早上8点（北京时间）
+  schedule:
+    - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: '测试模式（只分析一只股票）'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  stock-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 🐍 设置Python环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        
+    - name: 📦 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: 📊 执行股票分析
+      env:
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
+      run: |
+        if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
+          echo "🧪 测试模式：分析单只股票"
+          python main.py --stock 600519.SH
+        else
+          echo "📊 正式模式：分析股票池"
+          python main.py --watchlist
+        fi
+        
+    - name: 📦 上传报告文件
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: stock-analysis-reports-${{ github.run_number }}
+        path: |
+          reports/*.md
+          reports/*.json
+        retention-days: 30
+        
+    - name: 📊 提交报告到仓库
+      if: success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/
+        if git diff --staged --quiet; then
+          echo "📝 没有新的报告文件需要提交"
+        else
+          git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
+        
+    - name: 📧 创建分析报告Issue
+      if: success()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          
+          // 查找最新的汇总报告
+          const reportsDir = 'reports';
+          const files = fs.readdirSync(reportsDir);
+          const summaryFiles = files.filter(f => f.startsWith('summary_') && f.endsWith('.md'));
+          
+          if (summaryFiles.length === 0) {
+            console.log('没有找到汇总报告');
+            return;
+          }
+          
+          const latestSummary = summaryFiles.sort().pop();
+          const summaryPath = path.join(reportsDir, latestSummary);
+          const summaryContent = fs.readFileSync(summaryPath, 'utf8');
+          
+          // 提取关键信息
+          const lines = summaryContent.split('\n');
+          let tableContent = '';
+          let inTable = false;
+          
+          for (const line of lines) {
+            if (line.includes('| 股票代码 |')) {
+              inTable = true;
+              tableContent += line + '\n';
+            } else if (inTable && line.startsWith('|') && !line.includes('---')) {
+              tableContent += line + '\n';
+            } else if (inTable && !line.startsWith('|')) {
+              break;
+            }
+          }
+          
+          const today = new Date().toLocaleDateString('zh-CN');
+          const issueTitle = `📊 每日股票分析报告 - ${today}`;
+          
+          const issueBody = `## 📊 今日股票分析完成！
+          
+**分析时间**: ${today}
+**运行ID**: #${{ github.run_number }}
+
+### 📈 分析结果概览
+
+${tableContent}
+
+### 📎 详细报告
+
+- 📋 [汇总报告](https://github.com/${{ github.repository }}/blob/main/${summaryPath})
+- 📦 [下载所有报告](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+### 🤖 系统信息
+
+- **AI模型**: DeepSeek
+- **数据源**: Tushare  
+- **运行状态**: ✅ 成功
+- **下次运行**: 明天 08:00
+
+---
+
+> 💡 **提示**: 点击上方链接查看详细分析报告，或在Actions页面下载完整报告文件。
+
+> ⚠️ **风险提示**: 本报告仅供参考，不构成投资建议。投资有风险，决策需谨慎。`;
+
+          // 创建Issue
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: issueTitle,
+            body: issueBody,
+            labels: ['📊 分析报告', '🤖 自动生成']
+          });
+          
+          console.log('✅ Issue创建成功');
+          
+    - name: 📧 发送失败通知
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today = new Date().toLocaleDateString('zh-CN');
+          const issueTitle = `❌ 股票分析失败 - ${today}`;
+          
+          const issueBody = `## ❌ 今日股票分析失败
+          
+**失败时间**: ${today}
+**运行ID**: #${{ github.run_number }}
+
+### 🔍 故障信息
+
+请检查以下可能的原因：
+
+1. **API密钥问题**: DeepSeek或Tushare API密钥可能过期
+2. **网络问题**: API服务可能暂时不可用  
+3. **代码错误**: 可能存在代码bug
+4. **配额限制**: API调用可能超出限制
+
+### 📋 排查步骤
+
+1. 查看 [Actions日志](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+2. 检查Secrets中的API密钥是否正确
+3. 确认API服务状态是否正常
+4. 如问题持续，请手动运行测试
+
+---
+
+> 🔧 **建议**: 可以手动触发工作流进行测试，或等待下次自动运行。`;
+
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: issueTitle,
+            body: issueBody,
+            labels: ['❌ 错误', '🤖 自动生成', '🚨 需要关注']
+          });
+          
+          console.log('✅ 失败通知Issue创建成功');
