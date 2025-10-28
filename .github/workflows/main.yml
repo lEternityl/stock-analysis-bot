@@ -15,6 +15,10 @@ on:
 jobs:
   stock-analysis:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     
     steps:
     - name: 📥 检出代码
@@ -64,13 +68,14 @@ jobs:
           echo "📝 没有新的报告文件需要提交"
         else
           git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         fi
         
     - name: 📧 创建成功通知Issue
       if: success()
       uses: actions/github-script@v7
       with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const today = new Date().toLocaleDateString('zh-CN');
           const runNumber = '${{ github.run_number }}';
@@ -107,6 +112,7 @@ jobs:
       if: failure()
       uses: actions/github-script@v7
       with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const today = new Date().toLocaleDateString('zh-CN');
           const runNumber = '${{ github.run_number }}';
