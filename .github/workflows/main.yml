@@ -37,6 +37,7 @@ jobs:
         pip install -r requirements.txt
         
     - name: 📊 执行股票分析
+      id: analysis
       env:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
@@ -60,6 +61,7 @@ jobs:
         retention-days: 30
         
     - name: 📊 提交报告到仓库
+      id: git-push
       if: success()
       run: |
         git config --local user.email "action@github.com"
@@ -96,8 +98,8 @@ jobs:
           done
         fi
         
-    - name: 📧 创建成功通知Issue
-      if: success()
+    - name: 📧 创建分析完成通知Issue
+      if: steps.analysis.conclusion == 'success'
       uses: actions/github-script@v7
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -133,8 +135,8 @@ jobs:
           
           console.log('✅ 成功通知Issue创建完成');
           
-    - name: 📧 创建失败通知Issue
-      if: failure()
+    - name: 📧 创建分析失败通知Issue
+      if: steps.analysis.conclusion == 'failure'
       uses: actions/github-script@v7
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -171,3 +173,44 @@ jobs:
           });
           
           console.log('✅ 失败通知Issue创建完成');
+          
+    - name: 📧 创建Git推送失败通知Issue
+      if: steps.analysis.conclusion == 'success' && steps.git-push.conclusion == 'failure'
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const today = new Date().toLocaleDateString('zh-CN');
+          const runNumber = '${{ github.run_number }}';
+          const runId = '${{ github.run_id }}';
+          const repo = '${{ github.repository }}';
+          
+          const issueTitle = '⚠️ 分析成功但推送失败 - ' + today;
+          const issueBody = '## ⚠️ 股票分析成功，但Git推送失败\n\n' +
+            '**时间**: ' + today + '\n' +
+            '**运行ID**: #' + runNumber + '\n\n' +
+            '### ✅ 成功部分\n\n' +
+            '- ✅ 股票分析完成\n' +
+            '- ✅ 报告生成成功\n' +
+            '- ✅ 文件上传到Artifacts\n\n' +
+            '### ❌ 失败部分\n\n' +
+            '- ❌ Git推送到仓库失败（可能是代码冲突）\n\n' +
+            '### 📎 获取报告\n\n' +
+            '- 📦 [下载分析报告](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
+            '- 📋 报告已生成但未推送到仓库\n\n' +
+            '### 🔧 解决方案\n\n' +
+            '1. 手动下载报告文件\n' +
+            '2. 等待下次自动运行（已优化推送逻辑）\n' +
+            '3. 检查是否有其他进程在修改仓库\n\n' +
+            '---\n\n' +
+            '> 💡 **说明**: 这不影响分析质量，报告仍可通过Artifacts下载。';
+
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: issueTitle,
+            body: issueBody,
+            labels: ['⚠️ 部分失败', '🤖 自动生成', '📊 分析报告']
+          });
+          
+          console.log('✅ Git推送失败通知Issue创建完成');
