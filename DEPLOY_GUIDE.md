@@ -44,8 +44,8 @@ git push origin main
 
 | Secret名称 | 值 |
 |-----------|---|
-| `DEEPSEEK_API_KEY` | `sk-32badf3759f74b41b7797ce0f60994da` |
-| `TUSHARE_TOKEN` | `2876ea85cb005fb5fa17c809a98174f2d5aae8b1f830110a5ead6211` |
+| `DEEPSEEK_API_KEY` | `请输入你的api` |
+| `TUSHARE_TOKEN` | `请输入你的api` |
 
 ### 3️⃣ 启用GitHub通知
 
