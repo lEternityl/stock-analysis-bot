@@ -1,0 +1,142 @@
+name: 📊 每日股票分析
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
+  
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: '测试模式（只分析一只股票）'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  stock-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 🐍 设置Python环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        
+    - name: 📦 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: 📊 执行股票分析
+      env:
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
+      run: |
+        if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
+          echo "🧪 测试模式：分析单只股票"
+          python main.py --stock 600519.SH
+        else
+          echo "📊 正式模式：分析股票池"
+          python main.py --watchlist
+        fi
+        
+    - name: 📦 上传报告文件
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: stock-analysis-reports-${{ github.run_number }}
+        path: |
+          reports/*.md
+          reports/*.json
+        retention-days: 30
+        
+    - name: 📊 提交报告到仓库
+      if: success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/
+        if git diff --staged --quiet; then
+          echo "📝 没有新的报告文件需要提交"
+        else
+          git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
+        
+    - name: 📧 创建成功通知Issue
+      if: success()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today = new Date().toLocaleDateString('zh-CN');
+          const runNumber = '${{ github.run_number }}';
+          const runId = '${{ github.run_id }}';
+          const repo = '${{ github.repository }}';
+          
+          const issueTitle = '📊 每日股票分析报告 - ' + today;
+          const issueBody = '## 📊 今日股票分析完成！\n\n' +
+            '**分析时间**: ' + today + '\n' +
+            '**运行ID**: #' + runNumber + '\n\n' +
+            '### 📎 详细报告\n\n' +
+            '- 📦 [下载所有报告](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
+            '- 📋 查看仓库中的reports目录获取详细报告\n\n' +
+            '### 🤖 系统信息\n\n' +
+            '- **AI模型**: DeepSeek\n' +
+            '- **数据源**: Tushare\n' +
+            '- **运行状态**: ✅ 成功\n' +
+            '- **下次运行**: 明天 08:00\n\n' +
+            '---\n\n' +
+            '> 💡 **提示**: 在Actions页面下载完整报告文件。\n\n' +
+            '> ⚠️ **风险提示**: 本报告仅供参考，不构成投资建议。投资有风险，决策需谨慎。';
+
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: issueTitle,
+            body: issueBody,
+            labels: ['📊 分析报告', '🤖 自动生成']
+          });
+          
+          console.log('✅ 成功通知Issue创建完成');
+          
+    - name: 📧 创建失败通知Issue
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today = new Date().toLocaleDateString('zh-CN');
+          const runNumber = '${{ github.run_number }}';
+          const runId = '${{ github.run_id }}';
+          const repo = '${{ github.repository }}';
+          
+          const issueTitle = '❌ 股票分析失败 - ' + today;
+          const issueBody = '## ❌ 今日股票分析失败\n\n' +
+            '**失败时间**: ' + today + '\n' +
+            '**运行ID**: #' + runNumber + '\n\n' +
+            '### 🔍 故障信息\n\n' +
+            '请检查以下可能的原因：\n\n' +
+            '1. **API密钥问题**: DeepSeek或Tushare API密钥可能过期\n' +
+            '2. **网络问题**: API服务可能暂时不可用\n' +
+            '3. **代码错误**: 可能存在代码bug\n' +
+            '4. **配额限制**: API调用可能超出限制\n\n' +
+            '### 📋 排查步骤\n\n' +
+            '1. 查看 [Actions日志](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
+            '2. 检查Secrets中的API密钥是否正确\n' +
+            '3. 确认API服务状态是否正常\n' +
+            '4. 如问题持续，请手动运行测试\n\n' +
+            '---\n\n' +
+            '> 🔧 **建议**: 可以手动触发工作流进行测试，或等待下次自动运行。';
+
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: issueTitle,
+            body: issueBody,
+            labels: ['❌ 错误', '🤖 自动生成', '🚨 需要关注']
+          });
+          
+          console.log('✅ 失败通知Issue创建完成');
