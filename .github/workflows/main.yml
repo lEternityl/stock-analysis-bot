@@ -64,12 +64,36 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        
+        # 拉取远程更新以避免冲突
+        echo "🔄 拉取远程更新..."
+        git fetch origin
+        
+        # 尝试rebase，如果失败则使用merge
+        if ! git pull origin main --rebase; then
+          echo "⚠️ Rebase失败，尝试merge..."
+          git pull origin main --no-rebase
+        fi
+        
         git add reports/
         if git diff --staged --quiet; then
           echo "📝 没有新的报告文件需要提交"
         else
+          echo "📊 提交新的分析报告..."
           git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
+          # 重试推送机制
+          for i in {1..3}; do
+            if git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git; then
+              echo "✅ 报告推送成功"
+              break
+            else
+              echo "⚠️ 推送失败，第 $i 次重试..."
+              git fetch origin
+              git pull origin main --rebase || git pull origin main --no-rebase
+              sleep 2
+            fi
+          done
         fi
         
     - name: 📧 创建成功通知Issue
