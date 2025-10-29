@@ -97,49 +97,33 @@ jobs:
     - name: 📊 提交报告到仓库
       id: git-push
       if: success()
+      continue-on-error: true
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git config core.fileMode false
         
-        # 清理Python缓存文件
-        echo "🧹 清理Python缓存文件..."
+        # 清理缓存文件
+        echo "🧹 清理缓存文件..."
         find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
         find . -name "*.pyc" -delete 2>/dev/null || true
         
-        # 配置Git忽略文件权限变化
-        git config core.fileMode false
-        
-        # 强制同步远程更新
-        echo "📥 强制同步远程更新..."
-        git fetch origin
-        git reset --hard origin/main
-        
-        # 重新运行Python生成报告（因为reset后文件丢失）
-        echo "🔄 重新生成报告文件..."
-        export DEEPSEEK_API_KEY="${{ secrets.DEEPSEEK_API_KEY }}"
-        export TUSHARE_TOKEN="${{ secrets.TUSHARE_TOKEN }}"
-        export ANALYSIS_MODE="$ANALYSIS_MODE"
-        
-        if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
-          python main.py --stock 600519.SH
-        else
-          python main.py --watchlist
-        fi
-        
-        # 添加新生成的文件
+        # 简单的Git操作
         echo "📁 添加报告文件..."
         git add reports/ .gitignore
         
         if git diff --staged --quiet; then
           echo "📝 没有新的报告文件需要提交"
         else
-          echo "📊 提交新的分析报告..."
+          echo "📊 提交分析报告..."
           git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
           
-          # 推送到远程
-          echo "📤 推送到远程仓库..."
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          echo "✅ 报告推送成功"
+          echo "📤 推送到远程..."
+          # 简单推送，失败也不影响整体流程
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git || {
+            echo "⚠️ 推送失败，但不影响分析结果"
+            echo "📦 报告文件已在Artifacts中可下载"
+          }
         fi
         
     - name: 📧 创建分析完成通知Issue
