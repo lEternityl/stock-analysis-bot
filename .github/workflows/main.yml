@@ -109,20 +109,22 @@ jobs:
         # 配置Git忽略文件权限变化
         git config core.fileMode false
         
-        # 拉取远程更新（只获取，不合并）
-        echo "📥 获取远程更新..."
+        # 强制同步远程更新
+        echo "📥 强制同步远程更新..."
         git fetch origin
+        git reset --hard origin/main
+        
+        # 重新运行Python生成报告（因为reset后文件丢失）
+        echo "🔄 重新生成报告文件..."
+        if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
+          python main.py --stock 600519.SH
+        else
+          python main.py --watchlist
+        fi
         
         # 添加新生成的文件
         echo "📁 添加报告文件..."
         git add reports/ .gitignore
-        
-        # 检查是否有冲突的文件
-        if git ls-files -u | grep -q .; then
-          echo "⚠️ 检测到合并冲突，尝试解决..."
-          git checkout --ours .
-          git add .
-        fi
         
         if git diff --staged --quiet; then
           echo "📝 没有新的报告文件需要提交"

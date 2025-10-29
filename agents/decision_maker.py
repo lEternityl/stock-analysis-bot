@@ -18,8 +18,8 @@ class Trader:
         print(f"\n💼 {self.role}正在做出决策...")
         
         ts_code = stock_data.get('ts_code', 'N/A')
-        basic_info = stock_data.get('basic_info', {})
-        realtime_quote = stock_data.get('realtime_quote', {})
+        basic_info = stock_data.get('basic_info', {}) or {} or {}
+        realtime_quote = stock_data.get('realtime_quote', {}) or {}
         
         # 整合所有分析结果
         context = f"""
@@ -88,7 +88,7 @@ class RiskManager:
         print(f"\n🛡️ {self.role}正在评估风险...")
         
         ts_code = stock_data.get('ts_code', 'N/A')
-        basic_info = stock_data.get('basic_info', {})
+        basic_info = stock_data.get('basic_info', {}) or {}
         
         context = f"""
 股票信息:
