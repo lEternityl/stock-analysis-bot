@@ -68,35 +68,35 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # 拉取远程更新以避免冲突
-        echo "🔄 拉取远程更新..."
+        # 清理可能的缓存文件冲突
+        echo "🧹 清理缓存文件..."
+        find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+        find . -name "*.pyc" -delete 2>/dev/null || true
+        
+        # 重置工作区，丢弃非报告文件的更改
+        echo "🔄 重置工作区..."
+        git reset --hard HEAD
+        git clean -fd
+        
+        # 拉取远程更新
+        echo "📥 拉取远程更新..."
         git fetch origin
+        git pull origin main --no-rebase
         
-        # 尝试rebase，如果失败则使用merge
-        if ! git pull origin main --rebase; then
-          echo "⚠️ Rebase失败，尝试merge..."
-          git pull origin main --no-rebase
-        fi
+        # 只添加reports目录
+        echo "📁 添加报告文件..."
+        git add reports/ .gitignore
         
-        git add reports/
         if git diff --staged --quiet; then
           echo "📝 没有新的报告文件需要提交"
         else
           echo "📊 提交新的分析报告..."
           git commit -m "📊 自动生成股票分析报告 - $(date +'%Y-%m-%d %H:%M:%S')"
           
-          # 重试推送机制
-          for i in {1..3}; do
-            if git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git; then
-              echo "✅ 报告推送成功"
-              break
-            else
-              echo "⚠️ 推送失败，第 $i 次重试..."
-              git fetch origin
-              git pull origin main --rebase || git pull origin main --no-rebase
-              sleep 2
-            fi
-          done
+          # 推送到远程
+          echo "📤 推送到远程仓库..."
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          echo "✅ 报告推送成功"
         fi
         
     - name: 📧 创建分析完成通知Issue
