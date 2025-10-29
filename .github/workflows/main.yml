@@ -56,8 +56,9 @@ jobs:
       with:
         name: stock-analysis-reports-${{ github.run_number }}
         path: |
-          reports/*.md
-          reports/*.json
+          reports/**/*.md
+          reports/**/*.json
+          reports/README.md
         retention-days: 30
         
     - name: 📊 提交报告到仓库
@@ -115,7 +116,8 @@ jobs:
             '**运行ID**: #' + runNumber + '\n\n' +
             '### 📎 详细报告\n\n' +
             '- 📦 [下载所有报告](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
-            '- 📋 查看仓库中的reports目录获取详细报告\n\n' +
+            '- 📋 [查看报告目录](https://github.com/' + repo + '/tree/main/reports) - 按股票和日期分类\n' +
+            '- 📊 [报告索引](https://github.com/' + repo + '/blob/main/reports/README.md) - 完整目录导航\n\n' +
             '### 🤖 系统信息\n\n' +
             '- **AI模型**: DeepSeek\n' +
             '- **数据源**: Tushare\n' +

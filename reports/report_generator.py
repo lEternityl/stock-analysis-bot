@@ -18,8 +18,21 @@ class ReportGenerator:
         """生成完整的投资分析报告"""
         print(f"\n📄 正在生成投资报告...")
         
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.output_dir}/{stock_code}_{timestamp}.md"
+        # 创建新的文件夹结构：reports/股票代码/日期/
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        timestamp = datetime.now().strftime("%H%M%S")
+        
+        # 清理股票代码，移除.SH/.SZ等后缀用作文件夹名
+        clean_stock_code = stock_code.replace('.SH', '').replace('.SZ', '').replace('.HK', '')
+        
+        # 创建目录结构
+        stock_dir = os.path.join(self.output_dir, clean_stock_code)
+        date_dir = os.path.join(stock_dir, date_str)
+        os.makedirs(date_dir, exist_ok=True)
+        
+        # 生成文件名
+        filename = os.path.join(date_dir, f"analysis_{timestamp}.md")
+        json_filename = os.path.join(date_dir, f"analysis_{timestamp}.json")
         
         report_content = self._format_markdown_report(stock_code, analysis_result)
         
@@ -27,13 +40,13 @@ class ReportGenerator:
             f.write(report_content)
         
         # 同时保存JSON格式
-        json_filename = f"{self.output_dir}/{stock_code}_{timestamp}.json"
         with open(json_filename, 'w', encoding='utf-8') as f:
             json.dump(analysis_result, f, ensure_ascii=False, indent=2)
         
         print(f"✅ 报告已生成:")
         print(f"   📋 Markdown: {filename}")
         print(f"   📊 JSON: {json_filename}")
+        print(f"   📁 目录结构: {self.output_dir}/{clean_stock_code}/{date_str}/")
         
         return filename
     
@@ -285,8 +298,10 @@ class ReportGenerator:
         """生成批量分析汇总报告"""
         print(f"\n📊 正在生成汇总报告...")
         
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.output_dir}/summary_{timestamp}.md"
+        # 汇总报告放在根目录下，按日期命名
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        timestamp = datetime.now().strftime("%H%M%S")
+        filename = os.path.join(self.output_dir, f"summary_{date_str}_{timestamp}.md")
         
         content = f"""# 📊 批量股票分析汇总报告
 
@@ -340,5 +355,97 @@ class ReportGenerator:
             f.write(content)
         
         print(f"✅ 汇总报告已生成: {filename}")
+        
+        # 同时生成目录索引
+        self._generate_index_file()
+        
         return filename
+    
+    def _generate_index_file(self):
+        """生成reports目录索引文件"""
+        index_file = os.path.join(self.output_dir, "README.md")
+        
+        content = f"""# 📊 股票分析报告目录
+
+**最后更新**: {datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")}
+
+## 📁 目录结构说明
+
+```
+reports/
+├── README.md                    # 本索引文件
+├── summary_YYYY-MM-DD_HHMMSS.md # 每日汇总报告
+├── 股票代码1/                    # 按股票分类
+│   ├── YYYY-MM-DD/              # 按日期分类
+│   │   ├── analysis_HHMMSS.md   # 分析报告(Markdown)
+│   │   └── analysis_HHMMSS.json # 分析数据(JSON)
+│   └── YYYY-MM-DD/
+└── 股票代码2/
+    └── YYYY-MM-DD/
+```
+
+## 📈 股票分析报告
+
+"""
+        
+        # 扫描现有报告，生成索引
+        try:
+            for item in os.listdir(self.output_dir):
+                item_path = os.path.join(self.output_dir, item)
+                
+                # 跳过非目录和特殊文件
+                if not os.path.isdir(item_path) or item.startswith('.'):
+                    continue
+                    
+                content += f"### 📊 {item}\n\n"
+                
+                # 扫描日期目录
+                dates = []
+                for date_item in os.listdir(item_path):
+                    date_path = os.path.join(item_path, date_item)
+                    if os.path.isdir(date_path):
+                        dates.append(date_item)
+                
+                # 按日期排序（最新的在前）
+                dates.sort(reverse=True)
+                
+                for date in dates[:5]:  # 只显示最近5天
+                    date_path = os.path.join(item_path, date)
+                    reports = [f for f in os.listdir(date_path) if f.endswith('.md')]
+                    
+                    if reports:
+                        # 取最新的报告
+                        latest_report = sorted(reports)[-1]
+                        report_path = f"{item}/{date}/{latest_report}"
+                        content += f"- [{date}]({report_path}) - 最新分析报告\n"
+                
+                content += "\n"
+                
+        except Exception as e:
+            print(f"⚠️ 生成索引时出错: {e}")
+        
+        content += f"""
+## 🔍 使用说明
+
+### 📋 报告类型
+- **汇总报告**: `summary_*.md` - 每日所有股票的分析汇总
+- **个股报告**: `股票代码/日期/analysis_*.md` - 单只股票的详细分析
+
+### 📊 数据格式
+- **Markdown格式** (`.md`) - 适合阅读的格式化报告
+- **JSON格式** (`.json`) - 结构化数据，适合程序处理
+
+### 🕒 更新频率
+- 每天早上8:00自动分析并生成报告
+- 手动触发也会生成报告
+
+---
+
+*本目录由AI股票分析系统自动维护*
+"""
+        
+        with open(index_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"📋 目录索引已更新: {index_file}")
 
