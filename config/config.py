@@ -1,6 +1,6 @@
 """
-配置文件 - 简化版TradingAgents
-只使用 DeepSeek 和 Tushare
+配置文件
+使用 DeepSeek 和 Tushare
 """
 import os
 from dotenv import load_dotenv
