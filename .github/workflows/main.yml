@@ -2,7 +2,7 @@ name: 📊 每日股票分析
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 北京时间 9:00
+    - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
   
   workflow_dispatch:
     inputs:
@@ -68,22 +68,31 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # 清理可能的缓存文件冲突
-        echo "🧹 清理缓存文件..."
-        find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
-        find . -name "*.pyc" -delete 2>/dev/null || true
+        # 备份新生成的报告文件
+        echo "💾 备份新生成的报告..."
+        if [ -d "reports" ]; then
+          cp -r reports /tmp/reports_backup
+          echo "✅ 报告已备份到 /tmp/reports_backup"
+        fi
         
-        # 重置工作区，丢弃非报告文件的更改
-        echo "🔄 重置工作区..."
-        git reset --hard HEAD
-        git clean -fd
+        # 清理缓存文件但保留reports目录
+        echo "🧹 清理缓存文件..."
+        find . -name "__pycache__" -type d -not -path "./reports/*" -exec rm -rf {} + 2>/dev/null || true
+        find . -name "*.pyc" -not -path "./reports/*" -delete 2>/dev/null || true
         
         # 拉取远程更新
         echo "📥 拉取远程更新..."
         git fetch origin
-        git pull origin main --no-rebase
+        git pull origin main --no-rebase || true
         
-        # 只添加reports目录
+        # 恢复报告文件
+        echo "🔄 恢复报告文件..."
+        if [ -d "/tmp/reports_backup" ]; then
+          cp -r /tmp/reports_backup/* reports/ 2>/dev/null || true
+          rm -rf /tmp/reports_backup
+        fi
+        
+        # 添加报告文件和gitignore
         echo "📁 添加报告文件..."
         git add reports/ .gitignore
         
