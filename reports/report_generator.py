@@ -329,7 +329,13 @@ class ReportGenerator:
             risk_level = risk.get('overall_risk_level', 'N/A')
             report_file = result.get('report_file', 'N/A')
             
-            content += f"| {ts_code} | {name} | {action} | {confidence}/10 | {risk_level} | [{ts_code}]({report_file}) |\n"
+            # 修复报告链接路径 - 移除多余的reports/前缀
+            if report_file.startswith('reports/'):
+                relative_path = report_file[8:]  # 移除 'reports/' 前缀
+            else:
+                relative_path = report_file
+            
+            content += f"| {ts_code} | {name} | {action} | {confidence}/10 | {risk_level} | [{ts_code}]({relative_path}) |\n"
         
         content += f"""
 ---

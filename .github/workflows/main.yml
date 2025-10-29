@@ -68,33 +68,28 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # 备份新生成的报告文件
-        echo "💾 备份新生成的报告..."
-        if [ -d "reports" ]; then
-          cp -r reports /tmp/reports_backup
-          echo "✅ 报告已备份到 /tmp/reports_backup"
-        fi
+        # 清理Python缓存文件
+        echo "🧹 清理Python缓存文件..."
+        find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+        find . -name "*.pyc" -delete 2>/dev/null || true
         
-        # 清理缓存文件但保留reports目录
-        echo "🧹 清理缓存文件..."
-        find . -name "__pycache__" -type d -not -path "./reports/*" -exec rm -rf {} + 2>/dev/null || true
-        find . -name "*.pyc" -not -path "./reports/*" -delete 2>/dev/null || true
+        # 配置Git忽略文件权限变化
+        git config core.fileMode false
         
-        # 拉取远程更新
-        echo "📥 拉取远程更新..."
+        # 拉取远程更新（只获取，不合并）
+        echo "📥 获取远程更新..."
         git fetch origin
-        git pull origin main --no-rebase || true
         
-        # 恢复报告文件
-        echo "🔄 恢复报告文件..."
-        if [ -d "/tmp/reports_backup" ]; then
-          cp -r /tmp/reports_backup/* reports/ 2>/dev/null || true
-          rm -rf /tmp/reports_backup
-        fi
-        
-        # 添加报告文件和gitignore
+        # 添加新生成的文件
         echo "📁 添加报告文件..."
         git add reports/ .gitignore
+        
+        # 检查是否有冲突的文件
+        if git ls-files -u | grep -q .; then
+          echo "⚠️ 检测到合并冲突，尝试解决..."
+          git checkout --ours .
+          git add .
+        fi
         
         if git diff --staged --quiet; then
           echo "📝 没有新的报告文件需要提交"
