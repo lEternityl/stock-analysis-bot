@@ -2,7 +2,7 @@ name: 📊 每日股票分析
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
+    - cron: '0 1 * * *'  # UTC 0:00 = 北京时间 9:00
   
   workflow_dispatch:
     inputs:
