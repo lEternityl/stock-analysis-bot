@@ -64,13 +64,19 @@ class ReportGenerator:
         
         timestamp = datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")
         
-        report = f"""# 📊 股票投资分析报告
+        # 获取分析模式
+        analysis_mode = data.get('analysis_mode', 'standard')
+        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🌆" if analysis_mode == "post_market" else "📊"
+        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
+        
+        report = f"""# {mode_emoji} 股票投资分析报告 - {mode_text}
 
 ---
 
 ## 📋 基本信息
 
 **生成时间**: {timestamp}  
+**分析类型**: {mode_emoji} {mode_text}  
 **股票代码**: {stock_code}  
 **股票名称**: {basic_info.get('name', 'N/A')}  
 **所属行业**: {basic_info.get('industry', 'N/A')}  
@@ -303,9 +309,15 @@ class ReportGenerator:
         timestamp = datetime.now().strftime("%H%M%S")
         filename = os.path.join(self.output_dir, f"summary_{date_str}_{timestamp}.md")
         
-        content = f"""# 📊 批量股票分析汇总报告
+        # 判断分析类型
+        analysis_mode = os.getenv('ANALYSIS_MODE', 'standard')
+        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🌆" if analysis_mode == "post_market" else "📊"
+        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
+        
+        content = f"""# {mode_emoji} 批量股票分析汇总报告 - {mode_text}
 
 **生成时间**: {datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")}  
+**分析类型**: {mode_emoji} {mode_text}  
 **分析数量**: {len(results)} 只股票
 
 ---

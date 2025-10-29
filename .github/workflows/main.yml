@@ -2,7 +2,8 @@ name: 📊 每日股票分析
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
+    - cron: '30 23 * * 0-4'  # UTC 23:30 = 北京时间 7:30 (周一到周五)
+    - cron: '30 12 * * 0-4'  # UTC 12:30 = 北京时间 20:30 (周一到周五)
   
   workflow_dispatch:
     inputs:
@@ -11,6 +12,15 @@ on:
         required: false
         default: 'false'
         type: boolean
+      analysis_type:
+        description: '分析类型'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+        - auto        # 自动判断
+        - pre_market  # 开盘前分析
+        - post_market # 收盘后分析
 
 jobs:
   stock-analysis:
@@ -41,7 +51,30 @@ jobs:
       env:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
+        ANALYSIS_TYPE: ${{ github.event.inputs.analysis_type || 'auto' }}
       run: |
+        # 判断分析类型
+        CURRENT_HOUR=$(date -u +%H)
+        if [ "${{ github.event.inputs.analysis_type }}" = "pre_market" ]; then
+          ANALYSIS_MODE="pre_market"
+          echo "🌅 开盘前分析模式"
+        elif [ "${{ github.event.inputs.analysis_type }}" = "post_market" ]; then
+          ANALYSIS_MODE="post_market"
+          echo "🌆 收盘后分析模式"
+        else
+          # 自动判断：UTC 23:30 = 开盘前，UTC 12:30 = 收盘后
+          if [ "$CURRENT_HOUR" = "23" ] || [ "$CURRENT_HOUR" = "00" ]; then
+            ANALYSIS_MODE="pre_market"
+            echo "🌅 自动识别：开盘前分析 (UTC $CURRENT_HOUR:xx)"
+          else
+            ANALYSIS_MODE="post_market"
+            echo "🌆 自动识别：收盘后分析 (UTC $CURRENT_HOUR:xx)"
+          fi
+        fi
+        
+        # 设置分析模式环境变量
+        export ANALYSIS_MODE=$ANALYSIS_MODE
+        
         if [ "${{ github.event.inputs.test_mode }}" = "true" ]; then
           echo "🧪 测试模式：分析单只股票"
           python main.py --stock 600519.SH

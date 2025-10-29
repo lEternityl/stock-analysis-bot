@@ -77,8 +77,13 @@ class StockAnalysisSystem:
     
     def analyze_stock(self, stock_code: str, save_cache: bool = True) -> Dict[str, Any]:
         """分析单只股票"""
+        # 检查分析模式
+        analysis_mode = os.getenv('ANALYSIS_MODE', 'standard')
+        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🌆" if analysis_mode == "post_market" else "📊"
+        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
+        
         print("\n" + "="*80)
-        print(f"📊 开始分析股票: {stock_code}")
+        print(f"{mode_emoji} {mode_text}: {stock_code}")
         print("="*80)
         
         start_time = datetime.now()
@@ -149,6 +154,7 @@ class StockAnalysisSystem:
             'decision': trading_decision,
             'risk_assessment': risk_assessment,
             'analysis_time': datetime.now().isoformat(),
+            'analysis_mode': analysis_mode,
             'duration_seconds': (datetime.now() - start_time).total_seconds()
         }
         
