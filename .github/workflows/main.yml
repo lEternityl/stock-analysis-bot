@@ -3,7 +3,7 @@ name: 📊 每日股票分析
 on:
   schedule:
     - cron: '30 23 * * 0-4'  # UTC 23:30 = 北京时间 7:30 (周一到周五)
-    - cron: '30 12 * * 0-4'  # UTC 12:30 = 北京时间 20:30 (周一到周五)
+    - cron: '0 4 * * 1-5'    # UTC 4:00 = 北京时间 12:00 (周一到周五)
   
   workflow_dispatch:
     inputs:
@@ -20,6 +20,7 @@ on:
         options:
         - auto        # 自动判断
         - pre_market  # 开盘前分析
+        - midday      # 中午分析
         - post_market # 收盘后分析
 
 jobs:
@@ -58,17 +59,23 @@ jobs:
         if [ "${{ github.event.inputs.analysis_type }}" = "pre_market" ]; then
           ANALYSIS_MODE="pre_market"
           echo "🌅 开盘前分析模式"
+        elif [ "${{ github.event.inputs.analysis_type }}" = "midday" ]; then
+          ANALYSIS_MODE="midday"
+          echo "🕐 中午分析模式"
         elif [ "${{ github.event.inputs.analysis_type }}" = "post_market" ]; then
           ANALYSIS_MODE="post_market"
           echo "🌆 收盘后分析模式"
         else
-          # 自动判断：UTC 23:30 = 开盘前，UTC 12:30 = 收盘后
+          # 自动判断：UTC 23:30 = 开盘前，UTC 4:00 = 中午分析
           if [ "$CURRENT_HOUR" = "23" ] || [ "$CURRENT_HOUR" = "00" ]; then
             ANALYSIS_MODE="pre_market"
             echo "🌅 自动识别：开盘前分析 (UTC $CURRENT_HOUR:xx)"
+          elif [ "$CURRENT_HOUR" = "4" ]; then
+            ANALYSIS_MODE="midday"
+            echo "🕐 自动识别：中午分析 (UTC $CURRENT_HOUR:xx)"
           else
-            ANALYSIS_MODE="post_market"
-            echo "🌆 自动识别：收盘后分析 (UTC $CURRENT_HOUR:xx)"
+            ANALYSIS_MODE="standard"
+            echo "📊 自动识别：标准分析 (UTC $CURRENT_HOUR:xx)"
           fi
         fi
         

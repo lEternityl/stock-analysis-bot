@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import Dict, Any
 import json
 import os
+import pytz
 
 class ReportGenerator:
     """报告生成器"""
@@ -13,14 +14,21 @@ class ReportGenerator:
     def __init__(self, output_dir: str = "reports"):
         self.output_dir = output_dir
         os.makedirs(output_dir, exist_ok=True)
+        # 设置北京时区
+        self.beijing_tz = pytz.timezone('Asia/Shanghai')
+    
+    def _get_beijing_time(self):
+        """获取北京时间"""
+        return datetime.now(self.beijing_tz)
         
     def generate_report(self, stock_code: str, analysis_result: Dict[str, Any]) -> str:
         """生成完整的投资分析报告"""
         print(f"\n📄 正在生成投资报告...")
         
-        # 创建新的文件夹结构：reports/股票代码/日期/
-        date_str = datetime.now().strftime("%Y-%m-%d")
-        timestamp = datetime.now().strftime("%H%M%S")
+        # 创建新的文件夹结构：reports/股票代码/日期/ (使用北京时间)
+        beijing_time = self._get_beijing_time()
+        date_str = beijing_time.strftime("%Y-%m-%d")
+        timestamp = beijing_time.strftime("%H%M%S")
         
         # 清理股票代码，移除.SH/.SZ等后缀用作文件夹名
         clean_stock_code = stock_code.replace('.SH', '').replace('.SZ', '').replace('.HK', '')
@@ -62,12 +70,13 @@ class ReportGenerator:
         decision = data.get('decision', {})
         risk = data.get('risk_assessment', {})
         
-        timestamp = datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")
+        beijing_time = self._get_beijing_time()
+        timestamp = beijing_time.strftime("%Y年%m月%d日 %H:%M:%S")
         
         # 获取分析模式
         analysis_mode = data.get('analysis_mode', 'standard')
-        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🌆" if analysis_mode == "post_market" else "📊"
-        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
+        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🕐" if analysis_mode == "midday" else "🌆" if analysis_mode == "post_market" else "📊"
+        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "中午分析" if analysis_mode == "midday" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
         
         report = f"""# {mode_emoji} 股票投资分析报告 - {mode_text}
 
@@ -75,7 +84,7 @@ class ReportGenerator:
 
 ## 📋 基本信息
 
-**生成时间**: {timestamp}  
+**生成时间**: {timestamp} (北京时间)  
 **分析类型**: {mode_emoji} {mode_text}  
 **股票代码**: {stock_code}  
 **股票名称**: {basic_info.get('name', 'N/A')}  
@@ -242,7 +251,7 @@ class ReportGenerator:
 - **分析模型**: DeepSeek AI
 - **数据来源**: Tushare
 - **报告版本**: v1.0
-- **生成时间**: {timestamp}
+- **生成时间**: {timestamp} (北京时间)
 
 ---
 
@@ -304,19 +313,20 @@ class ReportGenerator:
         """生成批量分析汇总报告"""
         print(f"\n📊 正在生成汇总报告...")
         
-        # 汇总报告放在根目录下，按日期命名
-        date_str = datetime.now().strftime("%Y-%m-%d")
-        timestamp = datetime.now().strftime("%H%M%S")
+        # 汇总报告放在根目录下，按日期命名 (使用北京时间)
+        beijing_time = self._get_beijing_time()
+        date_str = beijing_time.strftime("%Y-%m-%d")
+        timestamp = beijing_time.strftime("%H%M%S")
         filename = os.path.join(self.output_dir, f"summary_{date_str}_{timestamp}.md")
         
         # 判断分析类型
         analysis_mode = os.getenv('ANALYSIS_MODE', 'standard')
-        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🌆" if analysis_mode == "post_market" else "📊"
-        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
+        mode_emoji = "🌅" if analysis_mode == "pre_market" else "🕐" if analysis_mode == "midday" else "🌆" if analysis_mode == "post_market" else "📊"
+        mode_text = "开盘前分析" if analysis_mode == "pre_market" else "中午分析" if analysis_mode == "midday" else "收盘后分析" if analysis_mode == "post_market" else "标准分析"
         
         content = f"""# {mode_emoji} 批量股票分析汇总报告 - {mode_text}
 
-**生成时间**: {datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")}  
+**生成时间**: {beijing_time.strftime("%Y年%m月%d日 %H:%M:%S")} (北京时间)  
 **分析类型**: {mode_emoji} {mode_text}  
 **分析数量**: {len(results)} 只股票
 
@@ -383,9 +393,10 @@ class ReportGenerator:
         """生成reports目录索引文件"""
         index_file = os.path.join(self.output_dir, "README.md")
         
+        beijing_time = self._get_beijing_time()
         content = f"""# 📊 股票分析报告目录
 
-**最后更新**: {datetime.now().strftime("%Y年%m月%d日 %H:%M:%S")}
+**最后更新**: {beijing_time.strftime("%Y年%m月%d日 %H:%M:%S")} (北京时间)
 
 ## 📁 目录结构说明
 

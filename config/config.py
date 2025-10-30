@@ -1,6 +1,6 @@
 """
-配置文件
-DeepSeek 和 Tushare
+配置文件 - 简化版TradingAgents
+只使用 DeepSeek 和 Tushare
 """
 import os
 from dotenv import load_dotenv
@@ -27,7 +27,7 @@ STOCK_WATCHLIST = [
 
 # 定时任务配置 - 双时段分析
 PRE_MARKET_TIME = "07:30"   # 开盘前分析时间
-POST_MARKET_TIME = "20:30"  # 收盘后分析时间
+MIDDAY_TIME = "12:00"       # 中午分析时间
 
 # 兼容性保持
 DAILY_REPORT_TIME = PRE_MARKET_TIME
@@ -36,7 +36,6 @@ DAILY_REPORT_TIME = PRE_MARKET_TIME
 REPORT_DIR = "reports"
 LOG_DIR = "logs"
 DATA_CACHE_DIR = "data/cache"
-
 
 # 分析配置
 MAX_DEBATE_ROUNDS = 2  # 辩论轮次
