@@ -214,8 +214,8 @@ jobs:
           // 修复表格中的链接格式
           let fixedTableContent = tableContent;
           if (latestSummary) {
-            // 添加summary链接信息
-            fixedTableContent = '> 📊 **完整汇总报告**: [' + latestSummary + '](reports/' + latestSummary + ')\n\n' + tableContent;
+            // 添加summary链接信息 - 使用绝对链接
+            fixedTableContent = '> 📊 **完整汇总报告**: [' + latestSummary + '](https://github.com/' + repo + '/blob/main/reports/' + latestSummary + ')\n\n' + tableContent;
             
             // 修复表格中的链接 - 将股票代码转换为完整路径
             const today_date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD格式
@@ -232,9 +232,9 @@ jobs:
                   const stockCode = parts[1];
                   const cleanCode = stockCode.replace('.SH', '').replace('.SZ', '').replace('.HK', '');
                   
-                  // 重构整行，第1列和最后一列都改为链接
-                  parts[1] = '[' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/)';
-                  parts[6] = '[' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/)';
+                  // 重构整行，第1列和最后一列都改为绝对链接
+                  parts[1] = '[' + stockCode + '](https://github.com/' + repo + '/tree/main/reports/' + cleanCode + '/' + today_date + ')';
+                  parts[6] = '[查看详细报告](https://github.com/' + repo + '/tree/main/reports/' + cleanCode + '/' + today_date + ')';
                   
                   processedLines.push(parts.join(' | '));
                 } else {
