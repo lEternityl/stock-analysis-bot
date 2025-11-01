@@ -22,12 +22,16 @@ class TechnicalAnalyst:
         basic_info = stock_data.get('basic_info', {}) or {}
         daily_data = stock_data.get('daily_data', []) or []
         realtime_quote = stock_data.get('realtime_quote', {}) or {}
+        intraday_data = stock_data.get('intraday_data', []) or []
+        is_trading_time = stock_data.get('is_trading_time', False)
         
         # 构建分析输入
         data_summary = f"""
 股票代码: {ts_code}
 股票名称: {basic_info.get('name', 'N/A')}
 所属行业: {basic_info.get('industry', 'N/A')}
+数据获取时间: {stock_data.get('fetch_time', 'N/A')}
+是否交易时间: {'是' if is_trading_time else '否'}
 
 最新行情:
 - 收盘价: {realtime_quote.get('close', 'N/A')}
@@ -37,6 +41,14 @@ class TechnicalAnalyst:
 
 近期行情数据（最近10个交易日）:
 {json.dumps(daily_data[-10:] if len(daily_data) > 10 else daily_data, ensure_ascii=False, indent=2)}
+"""
+        
+        # 如果有盘中数据，添加到分析中
+        if intraday_data:
+            data_summary += f"""
+
+盘中数据（最近1小时）:
+{json.dumps(intraday_data[-10:] if len(intraday_data) > 10 else intraday_data, ensure_ascii=False, indent=2)}
 """
         
         system_prompt = """你是一位资深的股票技术分析师，擅长通过技术指标和K线形态判断股票走势。

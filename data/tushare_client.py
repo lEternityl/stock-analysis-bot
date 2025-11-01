@@ -85,9 +85,33 @@ class TushareClient:
             return None
     
     def get_realtime_quote(self, ts_code: str) -> Optional[Dict[str, Any]]:
-        """获取实时行情"""
+        """获取实时行情（优先获取盘中数据）"""
         try:
-            # 获取最新交易日数据
+            # 方法1: 尝试获取分钟级数据（如果有权限）
+            current_time = datetime.now()
+            if current_time.hour >= 9 and current_time.hour <= 15:  # 交易时间内
+                try:
+                    # 获取当日分钟级数据
+                    current_date = current_time.strftime('%Y%m%d')
+                    start_time = '09:30:00'
+                    end_time = current_time.strftime('%H:%M:%S')
+                    
+                    minute_df = self.pro.stk_mins(ts_code=ts_code, 
+                                                  start_date=current_date, 
+                                                  end_date=current_date,
+                                                  start_time=start_time,
+                                                  end_time=end_time)
+                    
+                    if not minute_df.empty:
+                        # 获取最新的分钟数据
+                        latest_minute = minute_df.iloc[-1].to_dict()
+                        print(f"✅ 获取到盘中分钟级数据: {end_time}")
+                        return latest_minute
+                        
+                except Exception as minute_error:
+                    print(f"⚠️ 分钟级数据获取失败（可能需要更高权限）: {minute_error}")
+            
+            # 方法2: 获取最新交易日数据
             end_date = datetime.now().strftime('%Y%m%d')
             df = self.pro.daily(ts_code=ts_code, trade_date=end_date)
             
@@ -98,9 +122,51 @@ class TushareClient:
                     return None
             
             latest = df.iloc[0].to_dict()
+            print(f"✅ 获取到日线数据")
             return latest
+            
         except Exception as e:
             print(f"❌ 获取实时行情失败: {e}")
+            return None
+    
+    def get_intraday_data(self, ts_code: str, minutes: int = 30) -> Optional[pd.DataFrame]:
+        """获取盘中数据（最近N分钟）"""
+        try:
+            current_time = datetime.now()
+            
+            # 只在交易时间内获取
+            if not (9 <= current_time.hour <= 15):
+                print("⚠️ 非交易时间，无法获取盘中数据")
+                return None
+            
+            # 计算时间范围
+            end_time = current_time.strftime('%H:%M:%S')
+            start_time_dt = current_time - timedelta(minutes=minutes)
+            
+            # 确保不早于开盘时间
+            if start_time_dt.hour < 9 or (start_time_dt.hour == 9 and start_time_dt.minute < 30):
+                start_time = '09:30:00'
+            else:
+                start_time = start_time_dt.strftime('%H:%M:%S')
+            
+            current_date = current_time.strftime('%Y%m%d')
+            
+            # 获取分钟级数据
+            df = self.pro.stk_mins(ts_code=ts_code,
+                                   start_date=current_date,
+                                   end_date=current_date, 
+                                   start_time=start_time,
+                                   end_time=end_time)
+            
+            if not df.empty:
+                print(f"✅ 获取到{len(df)}条盘中数据 ({start_time} - {end_time})")
+                return df
+            else:
+                print("⚠️ 未获取到盘中数据")
+                return None
+                
+        except Exception as e:
+            print(f"❌ 获取盘中数据失败: {e}")
             return None
     
     def get_news(self, ts_code: str, days: int = 7) -> Optional[list]:
@@ -129,16 +195,28 @@ class TushareClient:
         """获取综合数据包"""
         print(f"\n📊 正在获取 {ts_code} 的综合数据...")
         
+        current_time = datetime.now()
+        is_trading_time = (9 <= current_time.hour <= 15) and current_time.weekday() < 5
+        
         data = {
             'ts_code': ts_code,
-            'fetch_time': datetime.now().isoformat(),
+            'fetch_time': current_time.isoformat(),
+            'is_trading_time': is_trading_time,
             'basic_info': self.get_stock_basic_info(ts_code),
             'daily_data': None,
             'financial_data': self.get_financial_data(ts_code),
             'financial_indicators': None,
             'realtime_quote': self.get_realtime_quote(ts_code),
+            'intraday_data': None,
             'news': self.get_news(ts_code),
         }
+        
+        # 如果是交易时间，尝试获取盘中数据
+        if is_trading_time:
+            print("🕐 交易时间内，尝试获取盘中数据...")
+            data['intraday_data'] = self.get_intraday_data(ts_code, minutes=60)  # 获取最近1小时数据
+        else:
+            print("⏰ 非交易时间，使用历史数据")
         
         # 转换DataFrame为dict
         daily_df = self.get_daily_data(ts_code)

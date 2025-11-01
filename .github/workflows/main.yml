@@ -139,26 +139,88 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
+          const fs = require('fs');
+          const path = require('path');
+          
           const today = new Date().toLocaleDateString('zh-CN');
           const runNumber = '${{ github.run_number }}';
           const runId = '${{ github.run_id }}';
           const repo = '${{ github.repository }}';
           
+          // 查找并读取最新的汇总报告
+          let summaryContent = '';
+          let tableContent = '';
+          let statsContent = '';
+          let analysisType = '标准分析';
+          
+          try {
+            const reportsDir = 'reports';
+            const files = fs.readdirSync(reportsDir);
+            const summaryFiles = files.filter(f => f.startsWith('summary_') && f.endsWith('.md'));
+            
+            if (summaryFiles.length > 0) {
+              const latestSummary = summaryFiles.sort().pop();
+              summaryContent = fs.readFileSync(path.join(reportsDir, latestSummary), 'utf8');
+              
+              const lines = summaryContent.split('\n');
+              let inTable = false;
+              let inStats = false;
+              
+              // 提取分析类型
+              for (const line of lines) {
+                if (line.includes('分析类型**:')) {
+                  const match = line.match(/\*\*分析类型\*\*:\s*(.+)/);
+                  if (match) analysisType = match[1].trim();
+                }
+              }
+              
+              // 提取表格和统计内容
+              for (const line of lines) {
+                if (line.includes('| 股票代码 |')) {
+                  inTable = true;
+                  tableContent += line + '\n';
+                } else if (inTable && line.startsWith('|') && !line.includes('---')) {
+                  tableContent += line + '\n';
+                } else if (inTable && !line.startsWith('|')) {
+                  inTable = false;
+                }
+                
+                if (line.includes('## 🎯 投资建议统计')) {
+                  inStats = true;
+                  continue;
+                } else if (inStats && (line.startsWith('- 🟢') || line.startsWith('- 🟡') || line.startsWith('- 🔴'))) {
+                  statsContent += line + '\n';
+                } else if (inStats && line.startsWith('---')) {
+                  inStats = false;
+                }
+              }
+            }
+          } catch (error) {
+            console.log('读取汇总报告失败:', error);
+            tableContent = '| 股票代码 | 状态 |\n|---------|------|\n| - | 报告处理中 |';
+            statsContent = '- 📊 数据处理中...';
+          }
+          
           const issueTitle = '📊 每日股票分析报告 - ' + today;
           const issueBody = '## 📊 今日股票分析完成！\n\n' +
-            '**分析时间**: ' + today + '\n' +
+            '**分析时间**: ' + today + ' (北京时间)\n' +
+            '**分析类型**: ' + analysisType + '\n' +
             '**运行ID**: #' + runNumber + '\n\n' +
+            '### 📈 分析结果概览\n\n' +
+            tableContent + '\n' +
+            '### 🎯 投资建议统计\n\n' +
+            statsContent + '\n' +
             '### 📎 详细报告\n\n' +
             '- 📦 [下载所有报告](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
             '- 📋 [查看报告目录](https://github.com/' + repo + '/tree/main/reports) - 按股票和日期分类\n' +
             '- 📊 [报告索引](https://github.com/' + repo + '/blob/main/reports/README.md) - 完整目录导航\n\n' +
             '### 🤖 系统信息\n\n' +
-            '- **AI模型**: DeepSeek\n' +
-            '- **数据源**: Tushare\n' +
+            '- **AI模型**: DeepSeek ✅\n' +
+            '- **数据源**: Tushare ✅\n' +
             '- **运行状态**: ✅ 成功\n' +
-            '- **下次运行**: 明天 08:00\n\n' +
+            '- **下次运行**: 工作日 7:30 / 12:00\n\n' +
             '---\n\n' +
-            '> 💡 **提示**: 在Actions页面下载完整报告文件。\n\n' +
+            '> 💡 **提示**: 上方表格显示完整分析结果，点击链接查看详细报告。\n\n' +
             '> ⚠️ **风险提示**: 本报告仅供参考，不构成投资建议。投资有风险，决策需谨慎。';
 
           await github.rest.issues.create({
