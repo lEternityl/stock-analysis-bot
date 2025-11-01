@@ -209,12 +209,27 @@ jobs:
           }
           
           const issueTitle = '📊 每日股票分析报告 - ' + today;
+          // 修复表格中的链接格式
+          let fixedTableContent = tableContent;
+          if (summaryFiles.length > 0) {
+            const latestSummary = summaryFiles.sort().pop();
+            // 添加summary链接信息
+            fixedTableContent = '> 📊 **完整汇总报告**: [' + latestSummary + '](reports/' + latestSummary + ')\n\n' + tableContent;
+            
+            // 修复表格中的链接 - 将股票代码转换为完整路径
+            const today_date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD格式
+            fixedTableContent = fixedTableContent.replace(/\| ([0-9]{6}\.[A-Z]{2}) \|/g, (match, stockCode) => {
+              const cleanCode = stockCode.replace('.SH', '').replace('.SZ', '').replace('.HK', '');
+              return '| [' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/) |';
+            });
+          }
+          
           const issueBody = '## 📊 今日股票分析完成！\n\n' +
             '**分析时间**: ' + today + ' (北京时间)\n' +
             '**分析类型**: ' + analysisType + '\n' +
             '**运行ID**: #' + runNumber + '\n\n' +
             '## 📋 分析结果概览\n\n' +
-            tableContent + '\n' +
+            fixedTableContent + '\n' +
             '## 🎯 投资建议统计\n\n' +
             statsContent + '\n' +
             '### 📎 详细报告\n\n' +
