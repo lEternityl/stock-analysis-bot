@@ -10,7 +10,7 @@ on:
       test_mode:
         description: '测试模式（只分析一只股票）'
         required: false
-        default: 'false'
+        default: false
         type: boolean
       analysis_type:
         description: '分析类型'
@@ -176,15 +176,22 @@ jobs:
               
               // 提取表格和统计内容
               for (const line of lines) {
-                if (line.includes('| 股票代码 |')) {
+                // 查找"📋 分析结果概览"部分的表格
+                if (line.includes('## 📋 分析结果概览')) {
                   inTable = true;
+                  continue;
+                } else if (inTable && line.includes('| 股票代码 |')) {
                   tableContent += line + '\n';
                 } else if (inTable && line.startsWith('|') && !line.includes('---')) {
                   tableContent += line + '\n';
-                } else if (inTable && !line.startsWith('|')) {
+                } else if (inTable && line.startsWith('---') && tableContent) {
+                  // 添加表格分隔线
+                  tableContent += line + '\n';
+                } else if (inTable && !line.startsWith('|') && !line.startsWith('---') && line.trim() !== '') {
                   inTable = false;
                 }
                 
+                // 查找"🎯 投资建议统计"部分
                 if (line.includes('## 🎯 投资建议统计')) {
                   inStats = true;
                   continue;
@@ -206,9 +213,9 @@ jobs:
             '**分析时间**: ' + today + ' (北京时间)\n' +
             '**分析类型**: ' + analysisType + '\n' +
             '**运行ID**: #' + runNumber + '\n\n' +
-            '### 📈 分析结果概览\n\n' +
+            '## 📋 分析结果概览\n\n' +
             tableContent + '\n' +
-            '### 🎯 投资建议统计\n\n' +
+            '## 🎯 投资建议统计\n\n' +
             statsContent + '\n' +
             '### 📎 详细报告\n\n' +
             '- 📦 [下载所有报告](https://github.com/' + repo + '/actions/runs/' + runId + ')\n' +
