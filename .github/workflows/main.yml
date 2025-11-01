@@ -219,10 +219,33 @@ jobs:
             
             // 修复表格中的链接 - 将股票代码转换为完整路径
             const today_date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD格式
-            fixedTableContent = fixedTableContent.replace(/\| ([0-9]{6}\.[A-Z]{2}) \|/g, (match, stockCode) => {
-              const cleanCode = stockCode.replace('.SH', '').replace('.SZ', '').replace('.HK', '');
-              return '| [' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/) |';
-            });
+            
+            // 处理表格中的股票代码，转换为可点击链接
+            const lines = fixedTableContent.split('\n');
+            let processedLines = [];
+            
+            for (const line of lines) {
+              if (line.startsWith('|') && !line.includes('股票代码') && !line.includes('---')) {
+                // 这是数据行，需要处理链接
+                const parts = line.split('|').map(part => part.trim());
+                if (parts.length >= 7 && parts[1]) { // 确保有足够的列
+                  const stockCode = parts[1];
+                  const cleanCode = stockCode.replace('.SH', '').replace('.SZ', '').replace('.HK', '');
+                  
+                  // 重构整行，第1列和最后一列都改为链接
+                  parts[1] = '[' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/)';
+                  parts[6] = '[' + stockCode + '](reports/' + cleanCode + '/' + today_date + '/)';
+                  
+                  processedLines.push(parts.join(' | '));
+                } else {
+                  processedLines.push(line);
+                }
+              } else {
+                processedLines.push(line);
+              }
+            }
+            
+            fixedTableContent = processedLines.join('\n');
           }
           
           const issueBody = '## 📊 今日股票分析完成！\n\n' +
