@@ -18,7 +18,7 @@ class BullResearcher:
         print(f"\n🐂 {self.role}正在研究...")
         
         ts_code = stock_data.get('ts_code', 'N/A')
-        basic_info = stock_data.get('basic_info', {})
+        basic_info = stock_data.get('basic_info', {}) or {}
         
         # 整合分析结果
         context = f"""
@@ -74,7 +74,7 @@ class BearResearcher:
         print(f"\n🐻 {self.role}正在研究...")
         
         ts_code = stock_data.get('ts_code', 'N/A')
-        basic_info = stock_data.get('basic_info', {})
+        basic_info = stock_data.get('basic_info', {}) or {}
         
         context = f"""
 股票信息:
@@ -130,7 +130,7 @@ class DebateCoordinator:
         print(f"\n⚖️ {self.role}正在组织辩论...")
         
         ts_code = stock_data.get('ts_code', 'N/A')
-        basic_info = stock_data.get('basic_info', {})
+        basic_info = stock_data.get('basic_info', {}) or {}
         
         debate_history = []
         

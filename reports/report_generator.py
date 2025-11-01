@@ -62,13 +62,14 @@ class ReportGenerator:
         """格式化Markdown报告"""
         
         stock_data = data.get('stock_data', {})
-        basic_info = stock_data.get('basic_info', {})
-        realtime_quote = stock_data.get('realtime_quote', {})
+        basic_info = stock_data.get('basic_info', {}) or {}
+        realtime_quote = stock_data.get('realtime_quote', {}) or {}
         
-        analysts = data.get('analysis', {}).get('analysts', {})
-        debate = data.get('analysis', {}).get('debate', {})
-        decision = data.get('decision', {})
-        risk = data.get('risk_assessment', {})
+        analysis = data.get('analysis', {}) or {}
+        analysts = analysis.get('analysts', {}) or {}
+        debate = analysis.get('debate', {}) or {}
+        decision = data.get('decision', {}) or {}
+        risk = data.get('risk_assessment', {}) or {}
         
         beijing_time = self._get_beijing_time()
         timestamp = beijing_time.strftime("%Y年%m月%d日 %H:%M:%S")
@@ -339,10 +340,10 @@ class ReportGenerator:
 """
         
         for result in results:
-            stock_data = result.get('stock_data', {})
-            basic_info = stock_data.get('basic_info', {})
-            decision = result.get('decision', {})
-            risk = result.get('risk_assessment', {})
+            stock_data = result.get('stock_data', {}) or {}
+            basic_info = stock_data.get('basic_info', {}) or {}
+            decision = result.get('decision', {}) or {}
+            risk = result.get('risk_assessment', {}) or {}
             
             ts_code = stock_data.get('ts_code', 'N/A')
             name = basic_info.get('name', 'N/A')
@@ -366,9 +367,9 @@ class ReportGenerator:
 
 """
         # 统计各类建议数量
-        buy_count = sum(1 for r in results if r.get('decision', {}).get('action') == '买入')
-        hold_count = sum(1 for r in results if r.get('decision', {}).get('action') == '持有')
-        sell_count = sum(1 for r in results if r.get('decision', {}).get('action') == '卖出')
+        buy_count = sum(1 for r in results if (r.get('decision', {}) or {}).get('action') == '买入')
+        hold_count = sum(1 for r in results if (r.get('decision', {}) or {}).get('action') == '持有')
+        sell_count = sum(1 for r in results if (r.get('decision', {}) or {}).get('action') == '卖出')
         
         content += f"""- 🟢 买入: {buy_count} 只
 - 🟡 持有: {hold_count} 只
