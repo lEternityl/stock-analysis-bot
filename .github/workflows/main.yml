@@ -152,14 +152,16 @@ jobs:
           let tableContent = '';
           let statsContent = '';
           let analysisType = '标准分析';
+          let summaryFiles = [];
+          let latestSummary = '';
           
           try {
             const reportsDir = 'reports';
             const files = fs.readdirSync(reportsDir);
-            const summaryFiles = files.filter(f => f.startsWith('summary_') && f.endsWith('.md'));
+            summaryFiles = files.filter(f => f.startsWith('summary_') && f.endsWith('.md'));
             
             if (summaryFiles.length > 0) {
-              const latestSummary = summaryFiles.sort().pop();
+              latestSummary = summaryFiles.sort().pop();
               summaryContent = fs.readFileSync(path.join(reportsDir, latestSummary), 'utf8');
               
               const lines = summaryContent.split('\n');
@@ -211,8 +213,7 @@ jobs:
           const issueTitle = '📊 每日股票分析报告 - ' + today;
           // 修复表格中的链接格式
           let fixedTableContent = tableContent;
-          if (summaryFiles.length > 0) {
-            const latestSummary = summaryFiles.sort().pop();
+          if (latestSummary) {
             // 添加summary链接信息
             fixedTableContent = '> 📊 **完整汇总报告**: [' + latestSummary + '](reports/' + latestSummary + ')\n\n' + tableContent;
             
