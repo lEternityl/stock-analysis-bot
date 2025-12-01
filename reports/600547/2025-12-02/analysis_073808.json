@@ -1,0 +1,1100 @@
+{
+  "stock_data": {
+    "ts_code": "600547.SH",
+    "fetch_time": "2025-12-01T23:37:56.419477",
+    "is_trading_time": false,
+    "basic_info": {
+      "ts_code": "600547.SH",
+      "name": "山东黄金",
+      "area": "山东",
+      "industry": "黄金",
+      "market": "主板",
+      "list_date": "20030828"
+    },
+    "daily_data": null,
+    "financial_data": {
+      "income": {
+        "ts_code": "600547.SH",
+        "end_date": "20250930",
+        "total_revenue": 83783174059.44,
+        "revenue": 83783174059.44,
+        "operate_profit": 7583321247.47,
+        "total_profit": 7567788230.38,
+        "n_income": 5416759558.38
+      },
+      "balance": {
+        "ts_code": "600547.SH",
+        "end_date": "20250930",
+        "total_assets": 171961982952.41,
+        "total_liab": 108223766234.59,
+        "total_hldr_eqy_exc_min_int": 44455351165.06
+      },
+      "cashflow": {
+        "ts_code": "600547.SH",
+        "end_date": "20250930",
+        "n_cashflow_act": 15196015447.51,
+        "n_cashflow_inv_act": -8035835308.72,
+        "n_cash_flows_fnc_act": -990786532.01
+      }
+    },
+    "financial_indicators": [
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20250930",
+        "eps": 0.8,
+        "roe": 9.6195,
+        "roa": 5.3667,
+        "debt_to_assets": 62.9347,
+        "current_ratio": 0.5329,
+        "quick_ratio": 0.4198
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20250630",
+        "eps": 0.57,
+        "roe": 7.0146,
+        "roa": 3.8917,
+        "debt_to_assets": 63.1148,
+        "current_ratio": 0.4574,
+        "quick_ratio": 0.3353
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20250331",
+        "eps": 0.2,
+        "roe": 2.6898,
+        "roa": 1.5837,
+        "debt_to_assets": 63.6295,
+        "current_ratio": 0.4765,
+        "quick_ratio": 0.3445
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20250331",
+        "eps": 0.2,
+        "roe": 2.6898,
+        "roa": 1.5837,
+        "debt_to_assets": 63.6295,
+        "current_ratio": 0.4765,
+        "quick_ratio": 0.3445
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20241231",
+        "eps": 0.57,
+        "roe": 8.328,
+        "roa": 5.1254,
+        "debt_to_assets": 63.5441,
+        "current_ratio": 0.4601,
+        "quick_ratio": 0.3507
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20240930",
+        "eps": 0.39,
+        "roe": 6.1228,
+        "roa": 3.8599,
+        "debt_to_assets": 65.1025,
+        "current_ratio": 0.5038,
+        "quick_ratio": 0.37
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20240630",
+        "eps": 0.26,
+        "roe": 4.1523,
+        "roa": 2.5307,
+        "debt_to_assets": 64.6908,
+        "current_ratio": 0.4882,
+        "quick_ratio": 0.3483
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20240331",
+        "eps": 0.13,
+        "roe": 2.0919,
+        "roa": 1.2302,
+        "debt_to_assets": 62.038,
+        "current_ratio": 0.6051,
+        "quick_ratio": 0.4438
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20231231",
+        "eps": 0.42,
+        "roe": 7.0579,
+        "roa": 4.4259,
+        "debt_to_assets": 60.4311,
+        "current_ratio": 0.5789,
+        "quick_ratio": 0.4
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20230930",
+        "eps": 0.23,
+        "roe": 4.0273,
+        "roa": 2.9466,
+        "debt_to_assets": 60.6821,
+        "current_ratio": 0.7082,
+        "quick_ratio": 0.5028
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20230930",
+        "eps": NaN,
+        "roe": 4.0273,
+        "roa": 2.9466,
+        "debt_to_assets": 60.6821,
+        "current_ratio": 0.7082,
+        "quick_ratio": 0.5028
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20230630",
+        "eps": 0.15,
+        "roe": 2.6482,
+        "roa": 2.1165,
+        "debt_to_assets": 62.6176,
+        "current_ratio": 0.5627,
+        "quick_ratio": 0.4212
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20230331",
+        "eps": 0.07,
+        "roe": 1.3282,
+        "roa": 1.0447,
+        "debt_to_assets": 60.5213,
+        "current_ratio": 0.5678,
+        "quick_ratio": 0.4244
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20230331",
+        "eps": 0.07,
+        "roe": 1.3282,
+        "roa": 1.0447,
+        "debt_to_assets": 60.5213,
+        "current_ratio": 0.5678,
+        "quick_ratio": 0.4244
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20221231",
+        "eps": 0.2,
+        "roe": 4.0126,
+        "roa": 3.5168,
+        "debt_to_assets": 59.5505,
+        "current_ratio": 0.6196,
+        "quick_ratio": 0.5015
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20221231",
+        "eps": 0.2,
+        "roe": 4.0126,
+        "roa": 3.5168,
+        "debt_to_assets": 59.5505,
+        "current_ratio": 0.6196,
+        "quick_ratio": 0.5015
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220930",
+        "eps": 0.1,
+        "roe": 2.267,
+        "roa": 2.3282,
+        "debt_to_assets": 59.2784,
+        "current_ratio": 0.57,
+        "quick_ratio": 0.4069
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220930",
+        "eps": 0.1,
+        "roe": 2.267,
+        "roa": 2.3282,
+        "debt_to_assets": 59.2784,
+        "current_ratio": 0.57,
+        "quick_ratio": 0.4069
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220630",
+        "eps": 0.09,
+        "roe": 1.883,
+        "roa": 1.7806,
+        "debt_to_assets": 58.871,
+        "current_ratio": 0.5578,
+        "quick_ratio": 0.3998
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220630",
+        "eps": 0.09,
+        "roe": 1.883,
+        "roa": 1.7806,
+        "debt_to_assets": 58.871,
+        "current_ratio": 0.5578,
+        "quick_ratio": 0.3998
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220331",
+        "eps": 0.05,
+        "roe": 1.0716,
+        "roa": 0.9044,
+        "debt_to_assets": 60.2368,
+        "current_ratio": 0.5004,
+        "quick_ratio": 0.3782
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20220331",
+        "eps": 0.05,
+        "roe": 1.0716,
+        "roa": 0.9044,
+        "debt_to_assets": 60.2368,
+        "current_ratio": 0.5004,
+        "quick_ratio": 0.3782
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20211231",
+        "eps": -0.09,
+        "roe": -0.6681,
+        "roa": 0.9654,
+        "debt_to_assets": 59.4123,
+        "current_ratio": 0.4078,
+        "quick_ratio": 0.3225
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20211231",
+        "eps": -0.09,
+        "roe": -0.6681,
+        "roa": 0.9654,
+        "debt_to_assets": 59.4123,
+        "current_ratio": 0.4078,
+        "quick_ratio": 0.3225
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210930",
+        "eps": -0.28,
+        "roe": -4.3108,
+        "roa": -0.7748,
+        "debt_to_assets": 56.0525,
+        "current_ratio": 0.4647,
+        "quick_ratio": 0.3129
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210930",
+        "eps": -0.28,
+        "roe": -4.3108,
+        "roa": -0.7748,
+        "debt_to_assets": 56.0525,
+        "current_ratio": 0.4647,
+        "quick_ratio": 0.3129
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210630",
+        "eps": -0.31,
+        "roe": -4.6905,
+        "roa": -1.497,
+        "debt_to_assets": 54.1171,
+        "current_ratio": 0.4183,
+        "quick_ratio": 0.3051
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210630",
+        "eps": -0.31,
+        "roe": -4.6905,
+        "roa": -1.497,
+        "debt_to_assets": 54.1171,
+        "current_ratio": 0.4183,
+        "quick_ratio": 0.3051
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210331",
+        "eps": -0.07,
+        "roe": -1.0715,
+        "roa": -0.2521,
+        "debt_to_assets": 50.9473,
+        "current_ratio": 0.414,
+        "quick_ratio": 0.298
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20210331",
+        "eps": -0.07,
+        "roe": -1.0715,
+        "roa": -0.2521,
+        "debt_to_assets": 50.9473,
+        "current_ratio": 0.414,
+        "quick_ratio": 0.298
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20201231",
+        "eps": 0.52,
+        "roe": 8.7026,
+        "roa": 6.7739,
+        "debt_to_assets": 50.4341,
+        "current_ratio": 0.5157,
+        "quick_ratio": 0.4159
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20201231",
+        "eps": 0.52,
+        "roe": 8.7026,
+        "roa": 6.7739,
+        "debt_to_assets": 50.4341,
+        "current_ratio": 0.5157,
+        "quick_ratio": 0.4159
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200930",
+        "eps": 0.42,
+        "roe": 7.7354,
+        "roa": 5.3362,
+        "debt_to_assets": 58.0504,
+        "current_ratio": 0.4912,
+        "quick_ratio": 0.3629
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200930",
+        "eps": 0.42,
+        "roe": 7.7354,
+        "roa": 5.3362,
+        "debt_to_assets": 58.0504,
+        "current_ratio": 0.4912,
+        "quick_ratio": 0.3629
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200630",
+        "eps": 0.27,
+        "roe": 4.8907,
+        "roa": 3.4104,
+        "debt_to_assets": 56.7734,
+        "current_ratio": 0.4536,
+        "quick_ratio": 0.2953
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200630",
+        "eps": 0.27,
+        "roe": 4.8907,
+        "roa": 3.4104,
+        "debt_to_assets": 56.7734,
+        "current_ratio": 0.4536,
+        "quick_ratio": 0.2953
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200331",
+        "eps": 0.18,
+        "roe": 2.4041,
+        "roa": 1.7449,
+        "debt_to_assets": 55.9089,
+        "current_ratio": 0.4324,
+        "quick_ratio": 0.2727
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20200331",
+        "eps": 0.18,
+        "roe": 2.4041,
+        "roa": 1.7449,
+        "debt_to_assets": 55.9089,
+        "current_ratio": 0.4324,
+        "quick_ratio": 0.2727
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20191231",
+        "eps": 0.42,
+        "roe": 5.765,
+        "roa": 5.6396,
+        "debt_to_assets": 55.6057,
+        "current_ratio": 0.4166,
+        "quick_ratio": 0.2702
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20191231",
+        "eps": 0.42,
+        "roe": 5.765,
+        "roa": 5.6396,
+        "debt_to_assets": 55.6057,
+        "current_ratio": 0.4166,
+        "quick_ratio": 0.2702
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190930",
+        "eps": 0.31,
+        "roe": 4.3202,
+        "roa": 4.0982,
+        "debt_to_assets": 58.7119,
+        "current_ratio": 0.6335,
+        "quick_ratio": 0.5012
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190930",
+        "eps": 0.31,
+        "roe": 4.3202,
+        "roa": 4.0982,
+        "debt_to_assets": 58.7119,
+        "current_ratio": 0.6335,
+        "quick_ratio": 0.5012
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190630",
+        "eps": 0.3,
+        "roe": 3.042,
+        "roa": 2.7845,
+        "debt_to_assets": 49.9123,
+        "current_ratio": 0.454,
+        "quick_ratio": 0.2305
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190630",
+        "eps": 0.3,
+        "roe": 3.042,
+        "roa": 2.7845,
+        "debt_to_assets": 49.9123,
+        "current_ratio": 0.454,
+        "quick_ratio": 0.2305
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190331",
+        "eps": 0.17,
+        "roe": 1.6806,
+        "roa": 1.4893,
+        "debt_to_assets": 49.4,
+        "current_ratio": 0.552,
+        "quick_ratio": 0.3096
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20190331",
+        "eps": 0.17,
+        "roe": 1.6806,
+        "roa": 1.4893,
+        "debt_to_assets": 49.4,
+        "current_ratio": 0.552,
+        "quick_ratio": 0.3096
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20181231",
+        "eps": 0.45,
+        "roe": 4.6158,
+        "roa": 4.8498,
+        "debt_to_assets": 47.9886,
+        "current_ratio": 0.4622,
+        "quick_ratio": 0.2268
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20181231",
+        "eps": 0.45,
+        "roe": 4.6158,
+        "roa": 4.8498,
+        "debt_to_assets": 47.9886,
+        "current_ratio": 0.4622,
+        "quick_ratio": 0.2268
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180930",
+        "eps": 0.41,
+        "roe": 4.1135,
+        "roa": 3.6152,
+        "debt_to_assets": 54.1149,
+        "current_ratio": 0.7772,
+        "quick_ratio": 0.5277
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180930",
+        "eps": 0.41,
+        "roe": 4.1135,
+        "roa": 3.6152,
+        "debt_to_assets": 54.1149,
+        "current_ratio": 0.7772,
+        "quick_ratio": 0.5277
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180630",
+        "eps": 0.33,
+        "roe": 3.6885,
+        "roa": 3.0048,
+        "debt_to_assets": 58.507,
+        "current_ratio": 0.5061,
+        "quick_ratio": 0.2672
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180630",
+        "eps": 0.33,
+        "roe": 3.6885,
+        "roa": 3.0048,
+        "debt_to_assets": 58.507,
+        "current_ratio": 0.5061,
+        "quick_ratio": 0.2672
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180331",
+        "eps": 0.19,
+        "roe": 2.1024,
+        "roa": 1.6184,
+        "debt_to_assets": 58.3237,
+        "current_ratio": 0.5974,
+        "quick_ratio": 0.299
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20180331",
+        "eps": 0.19,
+        "roe": 2.1024,
+        "roa": 1.6184,
+        "debt_to_assets": 58.3237,
+        "current_ratio": 0.5974,
+        "quick_ratio": 0.299
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20171231",
+        "eps": 0.61,
+        "roe": 7.1438,
+        "roa": 5.8241,
+        "debt_to_assets": 59.2336,
+        "current_ratio": 0.6473,
+        "quick_ratio": 0.3567
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20171231",
+        "eps": 0.61,
+        "roe": 7.1438,
+        "roa": 5.8241,
+        "debt_to_assets": 59.2336,
+        "current_ratio": 0.6473,
+        "quick_ratio": 0.3567
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170930",
+        "eps": 0.48,
+        "roe": 5.6379,
+        "roa": 4.3781,
+        "debt_to_assets": 59.5412,
+        "current_ratio": 0.7244,
+        "quick_ratio": 0.3577
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170930",
+        "eps": 0.48,
+        "roe": 5.6379,
+        "roa": 4.3781,
+        "debt_to_assets": 59.5412,
+        "current_ratio": 0.7244,
+        "quick_ratio": 0.3577
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170630",
+        "eps": 0.33,
+        "roe": 3.9258,
+        "roa": 2.7995,
+        "debt_to_assets": 60.2154,
+        "current_ratio": 0.7475,
+        "quick_ratio": 0.4674
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170630",
+        "eps": 0.33,
+        "roe": 3.9258,
+        "roa": 2.7995,
+        "debt_to_assets": 60.2154,
+        "current_ratio": 0.7475,
+        "quick_ratio": 0.4674
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170331",
+        "eps": 0.18,
+        "roe": 2.0877,
+        "roa": 1.6905,
+        "debt_to_assets": 43.6577,
+        "current_ratio": 0.4967,
+        "quick_ratio": 0.2887
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20170331",
+        "eps": 0.18,
+        "roe": 2.0877,
+        "roa": 1.6905,
+        "debt_to_assets": 43.6577,
+        "current_ratio": 0.4967,
+        "quick_ratio": 0.2887
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20161231",
+        "eps": 0.77,
+        "roe": 10.2706,
+        "roa": 7.8947,
+        "debt_to_assets": 42.3609,
+        "current_ratio": 0.4217,
+        "quick_ratio": 0.2325
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20161231",
+        "eps": 0.77,
+        "roe": 10.2706,
+        "roa": 7.8947,
+        "debt_to_assets": 42.3609,
+        "current_ratio": 0.4217,
+        "quick_ratio": 0.2325
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160930",
+        "eps": 0.51,
+        "roe": 7.367,
+        "roa": 5.3664,
+        "debt_to_assets": 54.5923,
+        "current_ratio": 0.327,
+        "quick_ratio": 0.1479
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160930",
+        "eps": 0.51,
+        "roe": 7.367,
+        "roa": 5.3664,
+        "debt_to_assets": 54.5923,
+        "current_ratio": 0.327,
+        "quick_ratio": 0.1479
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160630",
+        "eps": 0.39,
+        "roe": 5.6167,
+        "roa": 4.024,
+        "debt_to_assets": 54.3518,
+        "current_ratio": 0.2955,
+        "quick_ratio": 0.1341
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160630",
+        "eps": 0.39,
+        "roe": 5.6167,
+        "roa": 4.024,
+        "debt_to_assets": 54.3518,
+        "current_ratio": 0.2955,
+        "quick_ratio": 0.1341
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160331",
+        "eps": 0.16,
+        "roe": 2.2646,
+        "roa": 1.7218,
+        "debt_to_assets": 55.1056,
+        "current_ratio": 0.3055,
+        "quick_ratio": 0.1524
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20160331",
+        "eps": 0.16,
+        "roe": 2.2646,
+        "roa": 1.7218,
+        "debt_to_assets": 55.1056,
+        "current_ratio": 0.3055,
+        "quick_ratio": 0.1524
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20151231",
+        "eps": 0.41,
+        "roe": 6.224,
+        "roa": 5.3225,
+        "debt_to_assets": 54.6382,
+        "current_ratio": 0.2235,
+        "quick_ratio": 0.138
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20151231",
+        "eps": 0.41,
+        "roe": 6.224,
+        "roa": 5.3225,
+        "debt_to_assets": 54.6382,
+        "current_ratio": 0.2235,
+        "quick_ratio": 0.138
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150930",
+        "eps": 0.19,
+        "roe": 2.9809,
+        "roa": 3.0757,
+        "debt_to_assets": 55.5602,
+        "current_ratio": 0.2163,
+        "quick_ratio": 0.1192
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150930",
+        "eps": 0.19,
+        "roe": 2.9809,
+        "roa": 3.0757,
+        "debt_to_assets": 55.5602,
+        "current_ratio": 0.2163,
+        "quick_ratio": 0.1192
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150630",
+        "eps": 0.03,
+        "roe": 0.5252,
+        "roa": 1.2263,
+        "debt_to_assets": 58.0131,
+        "current_ratio": 0.2879,
+        "quick_ratio": 0.1844
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150630",
+        "eps": 0.03,
+        "roe": 0.5252,
+        "roa": 1.2263,
+        "debt_to_assets": 58.0131,
+        "current_ratio": 0.2879,
+        "quick_ratio": 0.1844
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150331",
+        "eps": -0.05,
+        "roe": -0.7465,
+        "roa": -0.0132,
+        "debt_to_assets": 56.8063,
+        "current_ratio": 0.239,
+        "quick_ratio": 0.1526
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20150331",
+        "eps": -0.05,
+        "roe": -0.7465,
+        "roa": -0.0132,
+        "debt_to_assets": 56.8063,
+        "current_ratio": 0.239,
+        "quick_ratio": 0.1526
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20141231",
+        "eps": 0.58,
+        "roe": 9.4081,
+        "roa": 6.9215,
+        "debt_to_assets": 56.2968,
+        "current_ratio": 0.2313,
+        "quick_ratio": 0.157
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20141231",
+        "eps": 0.58,
+        "roe": 9.4081,
+        "roa": 6.9215,
+        "debt_to_assets": 56.2968,
+        "current_ratio": 0.2313,
+        "quick_ratio": 0.157
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140930",
+        "eps": 0.42,
+        "roe": 6.7942,
+        "roa": 4.8617,
+        "debt_to_assets": 58.7754,
+        "current_ratio": 0.2868,
+        "quick_ratio": 0.2423
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140930",
+        "eps": 0.42,
+        "roe": 6.7942,
+        "roa": 4.8617,
+        "debt_to_assets": 58.7754,
+        "current_ratio": 0.2868,
+        "quick_ratio": 0.2423
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140630",
+        "eps": 0.22,
+        "roe": 3.6453,
+        "roa": 2.9621,
+        "debt_to_assets": 57.0656,
+        "current_ratio": 0.2087,
+        "quick_ratio": 0.158
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140630",
+        "eps": 0.22,
+        "roe": 3.6453,
+        "roa": 2.9621,
+        "debt_to_assets": 57.0656,
+        "current_ratio": 0.2087,
+        "quick_ratio": 0.158
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140331",
+        "eps": 0.07,
+        "roe": 1.0928,
+        "roa": 1.0424,
+        "debt_to_assets": 58.0636,
+        "current_ratio": 0.2556,
+        "quick_ratio": 0.2008
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20140331",
+        "eps": 0.07,
+        "roe": 1.0928,
+        "roa": 1.0424,
+        "debt_to_assets": 58.0636,
+        "current_ratio": 0.2556,
+        "quick_ratio": 0.2008
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20131231",
+        "eps": 0.79,
+        "roe": 13.9376,
+        "roa": 8.9525,
+        "debt_to_assets": 57.7505,
+        "current_ratio": 0.2475,
+        "quick_ratio": 0.1585
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20131231",
+        "eps": 0.79,
+        "roe": 13.9376,
+        "roa": 8.9525,
+        "debt_to_assets": 57.7505,
+        "current_ratio": 0.2475,
+        "quick_ratio": 0.1585
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130930",
+        "eps": 0.8,
+        "roe": 13.9578,
+        "roa": 9.7249,
+        "debt_to_assets": 46.3875,
+        "current_ratio": 0.6258,
+        "quick_ratio": 0.4793
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130930",
+        "eps": 0.8,
+        "roe": 13.9578,
+        "roa": 9.7249,
+        "debt_to_assets": 46.3875,
+        "current_ratio": 0.6258,
+        "quick_ratio": 0.4793
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130630",
+        "eps": 0.68,
+        "roe": 12.0555,
+        "roa": 8.1938,
+        "debt_to_assets": 45.983,
+        "current_ratio": 0.5219,
+        "quick_ratio": 0.4055
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130630",
+        "eps": 0.68,
+        "roe": 12.0555,
+        "roa": 8.1938,
+        "debt_to_assets": 45.983,
+        "current_ratio": 0.5219,
+        "quick_ratio": 0.4055
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130331",
+        "eps": 0.4,
+        "roe": 7.2266,
+        "roa": 4.6924,
+        "debt_to_assets": 46.937,
+        "current_ratio": 0.6085,
+        "quick_ratio": 0.4917
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20130331",
+        "eps": 0.4,
+        "roe": 7.2266,
+        "roa": 4.6924,
+        "debt_to_assets": 46.937,
+        "current_ratio": 0.6085,
+        "quick_ratio": 0.4917
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20121231",
+        "eps": 1.53,
+        "roe": 32.482,
+        "roa": 21.1655,
+        "debt_to_assets": 49.5101,
+        "current_ratio": 0.4219,
+        "quick_ratio": 0.2716
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20121231",
+        "eps": 1.53,
+        "roe": 32.482,
+        "roa": 21.1655,
+        "debt_to_assets": 49.5101,
+        "current_ratio": 0.4219,
+        "quick_ratio": 0.2716
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20120930",
+        "eps": 1.29,
+        "roe": 28.3421,
+        "roa": 19.8975,
+        "debt_to_assets": 43.9003,
+        "current_ratio": 0.6788,
+        "quick_ratio": 0.5796
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20120930",
+        "eps": 1.29,
+        "roe": 28.3421,
+        "roa": 19.8975,
+        "debt_to_assets": 43.9003,
+        "current_ratio": 0.6788,
+        "quick_ratio": 0.5796
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20120630",
+        "eps": 0.99,
+        "roe": 22.4338,
+        "roa": 15.2273,
+        "debt_to_assets": 46.0631,
+        "current_ratio": 0.7265,
+        "quick_ratio": 0.5968
+      },
+      {
+        "ts_code": "600547.SH",
+        "end_date": "20120630",
+        "eps": 0.99,
+        "roe": 22.4338,
+        "roa": 15.2273,
+        "debt_to_assets": 46.0631,
+        "current_ratio": 0.7265,
+        "quick_ratio": 0.5968
+      }
+    ],
+    "realtime_quote": null,
+    "intraday_data": null,
+    "news": []
+  },
+  "analysis": {
+    "analysts": {
+      "technical": {
+        "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      "fundamental": {
+        "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      "news": {
+        "sentiment": "中性",
+        "key_events": "无重大新闻事件",
+        "impact_analysis": "无明显影响",
+        "news_score": 5,
+        "summary": "近期无重大新闻，市场情绪中性"
+      }
+    },
+    "debate": {
+      "bull_initial": {
+        "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      "bear_initial": {
+        "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      "debate_rounds": [
+        {
+          "round": 1,
+          "speaker": "bear",
+          "content": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "round": 2,
+          "speaker": "bull",
+          "content": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        },
+        {
+          "round": 2,
+          "speaker": "bear",
+          "content": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        }
+      ],
+      "debate_summary": {
+        "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      }
+    }
+  },
+  "decision": {
+    "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+  },
+  "risk_assessment": {
+    "raw_response": "错误: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+  },
+  "analysis_time": "2025-12-01T23:38:08.065485",
+  "analysis_mode": "pre_market",
+  "duration_seconds": 11.646025
+}
