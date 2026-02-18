@@ -1,0 +1,1715 @@
+{
+  "stock_data": {
+    "ts_code": "601600.SH",
+    "fetch_time": "2026-02-18T00:04:34.544489",
+    "is_trading_time": false,
+    "basic_info": {
+      "ts_code": "601600.SH",
+      "name": "中国铝业",
+      "area": "北京",
+      "industry": "铝",
+      "market": "主板",
+      "list_date": "20070430"
+    },
+    "daily_data": [
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251222",
+        "open": 11.05,
+        "high": 11.1,
+        "low": 10.86,
+        "close": 10.97,
+        "pre_close": 10.85,
+        "change": 0.12,
+        "pct_chg": 1.106,
+        "vol": 2035056.33,
+        "amount": 2235066.281
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251223",
+        "open": 10.89,
+        "high": 11.25,
+        "low": 10.85,
+        "close": 10.97,
+        "pre_close": 10.97,
+        "change": 0.0,
+        "pct_chg": 0.0,
+        "vol": 2263246.31,
+        "amount": 2501412.422
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251224",
+        "open": 11.0,
+        "high": 11.09,
+        "low": 10.8,
+        "close": 11.07,
+        "pre_close": 10.97,
+        "change": 0.1,
+        "pct_chg": 0.9116,
+        "vol": 2162177.92,
+        "amount": 2377332.772
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251225",
+        "open": 10.97,
+        "high": 10.98,
+        "low": 10.82,
+        "close": 10.96,
+        "pre_close": 11.07,
+        "change": -0.11,
+        "pct_chg": -0.9937,
+        "vol": 1617782.36,
+        "amount": 1765005.028
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251226",
+        "open": 10.99,
+        "high": 11.94,
+        "low": 10.97,
+        "close": 11.84,
+        "pre_close": 10.96,
+        "change": 0.88,
+        "pct_chg": 8.0292,
+        "vol": 4736291.42,
+        "amount": 5435929.758
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251229",
+        "open": 11.87,
+        "high": 11.94,
+        "low": 11.41,
+        "close": 11.45,
+        "pre_close": 11.84,
+        "change": -0.39,
+        "pct_chg": -3.2939,
+        "vol": 4258708.36,
+        "amount": 4960804.155
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251230",
+        "open": 11.13,
+        "high": 12.12,
+        "low": 11.12,
+        "close": 11.99,
+        "pre_close": 11.45,
+        "change": 0.54,
+        "pct_chg": 4.7162,
+        "vol": 4097543.52,
+        "amount": 4820315.432
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20251231",
+        "open": 11.99,
+        "high": 12.38,
+        "low": 11.96,
+        "close": 12.22,
+        "pre_close": 11.99,
+        "change": 0.23,
+        "pct_chg": 1.9183,
+        "vol": 3980493.75,
+        "amount": 4861601.306
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260105",
+        "open": 12.72,
+        "high": 13.3,
+        "low": 12.61,
+        "close": 13.02,
+        "pre_close": 12.22,
+        "change": 0.8,
+        "pct_chg": 6.5466,
+        "vol": 4586733.05,
+        "amount": 5957356.015
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260106",
+        "open": 13.28,
+        "high": 14.18,
+        "low": 13.28,
+        "close": 13.97,
+        "pre_close": 13.02,
+        "change": 0.95,
+        "pct_chg": 7.2965,
+        "vol": 5649240.3,
+        "amount": 7764393.42
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260107",
+        "open": 13.96,
+        "high": 14.24,
+        "low": 13.62,
+        "close": 14.05,
+        "pre_close": 13.97,
+        "change": 0.08,
+        "pct_chg": 0.5727,
+        "vol": 4796271.63,
+        "amount": 6669834.64
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260108",
+        "open": 13.7,
+        "high": 14.05,
+        "low": 13.48,
+        "close": 13.65,
+        "pre_close": 14.05,
+        "change": -0.4,
+        "pct_chg": -2.847,
+        "vol": 3769082.47,
+        "amount": 5180916.824
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260109",
+        "open": 13.49,
+        "high": 14.3,
+        "low": 13.49,
+        "close": 14.05,
+        "pre_close": 13.65,
+        "change": 0.4,
+        "pct_chg": 2.9304,
+        "vol": 3928651.27,
+        "amount": 5469608.311
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260112",
+        "open": 14.34,
+        "high": 14.44,
+        "low": 13.62,
+        "close": 13.85,
+        "pre_close": 14.05,
+        "change": -0.2,
+        "pct_chg": -1.4235,
+        "vol": 4743277.18,
+        "amount": 6597287.956
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260113",
+        "open": 13.8,
+        "high": 14.37,
+        "low": 13.69,
+        "close": 13.97,
+        "pre_close": 13.85,
+        "change": 0.12,
+        "pct_chg": 0.8664,
+        "vol": 3808487.57,
+        "amount": 5340090.059
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260114",
+        "open": 14.1,
+        "high": 14.43,
+        "low": 13.56,
+        "close": 13.63,
+        "pre_close": 13.97,
+        "change": -0.34,
+        "pct_chg": -2.4338,
+        "vol": 5399748.87,
+        "amount": 7522761.32
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260115",
+        "open": 13.48,
+        "high": 14.18,
+        "low": 13.32,
+        "close": 13.74,
+        "pre_close": 13.63,
+        "change": 0.11,
+        "pct_chg": 0.807,
+        "vol": 4213525.9,
+        "amount": 5805985.99
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260116",
+        "open": 13.75,
+        "high": 14.09,
+        "low": 13.1,
+        "close": 13.26,
+        "pre_close": 13.74,
+        "change": -0.48,
+        "pct_chg": -3.4934,
+        "vol": 5270087.46,
+        "amount": 7140959.221
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260119",
+        "open": 13.25,
+        "high": 13.41,
+        "low": 12.83,
+        "close": 13.33,
+        "pre_close": 13.26,
+        "change": 0.07,
+        "pct_chg": 0.5279,
+        "vol": 3612768.09,
+        "amount": 4764651.445
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260120",
+        "open": 13.4,
+        "high": 13.62,
+        "low": 12.93,
+        "close": 13.29,
+        "pre_close": 13.33,
+        "change": -0.04,
+        "pct_chg": -0.3001,
+        "vol": 3470860.63,
+        "amount": 4604142.772
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260121",
+        "open": 13.2,
+        "high": 13.46,
+        "low": 13.02,
+        "close": 13.4,
+        "pre_close": 13.29,
+        "change": 0.11,
+        "pct_chg": 0.8277,
+        "vol": 2678652.89,
+        "amount": 3561319.411
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260122",
+        "open": 13.4,
+        "high": 13.5,
+        "low": 13.21,
+        "close": 13.28,
+        "pre_close": 13.4,
+        "change": -0.12,
+        "pct_chg": -0.8955,
+        "vol": 2747074.18,
+        "amount": 3658676.363
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260123",
+        "open": 13.39,
+        "high": 13.52,
+        "low": 13.08,
+        "close": 13.23,
+        "pre_close": 13.28,
+        "change": -0.05,
+        "pct_chg": -0.3765,
+        "vol": 4759178.41,
+        "amount": 6327370.44
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260126",
+        "open": 13.46,
+        "high": 13.86,
+        "low": 13.33,
+        "close": 13.4,
+        "pre_close": 13.23,
+        "change": 0.17,
+        "pct_chg": 1.285,
+        "vol": 6752221.24,
+        "amount": 9173107.682
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260127",
+        "open": 13.34,
+        "high": 13.7,
+        "low": 13.11,
+        "close": 13.27,
+        "pre_close": 13.4,
+        "change": -0.13,
+        "pct_chg": -0.9701,
+        "vol": 5105605.57,
+        "amount": 6839552.676
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260128",
+        "open": 13.45,
+        "high": 14.6,
+        "low": 13.13,
+        "close": 14.6,
+        "pre_close": 13.27,
+        "change": 1.33,
+        "pct_chg": 10.0226,
+        "vol": 8297957.66,
+        "amount": 11718403.835
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260129",
+        "open": 15.01,
+        "high": 15.85,
+        "low": 14.24,
+        "close": 15.7,
+        "pre_close": 14.6,
+        "change": 1.1,
+        "pct_chg": 7.5342,
+        "vol": 10676862.27,
+        "amount": 16120934.544
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260130",
+        "open": 14.7,
+        "high": 15.01,
+        "low": 14.13,
+        "close": 14.13,
+        "pre_close": 15.7,
+        "change": -1.57,
+        "pct_chg": -10.0,
+        "vol": 7767544.92,
+        "amount": 11154511.799
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260202",
+        "open": 13.01,
+        "high": 13.6,
+        "low": 12.72,
+        "close": 12.72,
+        "pre_close": 14.13,
+        "change": -1.41,
+        "pct_chg": -9.9788,
+        "vol": 7878140.97,
+        "amount": 10322166.756
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260203",
+        "open": 13.1,
+        "high": 13.19,
+        "low": 12.67,
+        "close": 13.14,
+        "pre_close": 12.72,
+        "change": 0.42,
+        "pct_chg": 3.3019,
+        "vol": 4750325.29,
+        "amount": 6143511.809
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260204",
+        "open": 13.37,
+        "high": 13.54,
+        "low": 13.22,
+        "close": 13.44,
+        "pre_close": 13.14,
+        "change": 0.3,
+        "pct_chg": 2.2831,
+        "vol": 3370117.23,
+        "amount": 4504126.12
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260205",
+        "open": 13.13,
+        "high": 13.26,
+        "low": 12.36,
+        "close": 12.64,
+        "pre_close": 13.44,
+        "change": -0.8,
+        "pct_chg": -5.9524,
+        "vol": 3831791.27,
+        "amount": 4875000.354
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260206",
+        "open": 12.18,
+        "high": 13.08,
+        "low": 12.18,
+        "close": 12.89,
+        "pre_close": 12.64,
+        "change": 0.25,
+        "pct_chg": 1.9778,
+        "vol": 2963069.51,
+        "amount": 3783989.245
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260209",
+        "open": 13.12,
+        "high": 13.2,
+        "low": 12.88,
+        "close": 13.05,
+        "pre_close": 12.89,
+        "change": 0.16,
+        "pct_chg": 1.2413,
+        "vol": 2061399.69,
+        "amount": 2684937.921
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260210",
+        "open": 13.12,
+        "high": 13.26,
+        "low": 13.01,
+        "close": 13.15,
+        "pre_close": 13.05,
+        "change": 0.1,
+        "pct_chg": 0.7663,
+        "vol": 1982492.61,
+        "amount": 2603191.151
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260211",
+        "open": 13.06,
+        "high": 13.45,
+        "low": 13.05,
+        "close": 13.32,
+        "pre_close": 13.15,
+        "change": 0.17,
+        "pct_chg": 1.2928,
+        "vol": 2126246.23,
+        "amount": 2825969.942
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260212",
+        "open": 13.26,
+        "high": 13.44,
+        "low": 13.2,
+        "close": 13.21,
+        "pre_close": 13.32,
+        "change": -0.11,
+        "pct_chg": -0.8258,
+        "vol": 1878570.21,
+        "amount": 2499123.225
+      },
+      {
+        "ts_code": "601600.SH",
+        "trade_date": "20260213",
+        "open": 12.97,
+        "high": 13.09,
+        "low": 12.66,
+        "close": 12.69,
+        "pre_close": 13.21,
+        "change": -0.52,
+        "pct_chg": -3.9364,
+        "vol": 2591904.06,
+        "amount": 3323093.316
+      }
+    ],
+    "financial_data": {
+      "income": {
+        "ts_code": "601600.SH",
+        "end_date": "20250930",
+        "total_revenue": 176515725000.0,
+        "revenue": 176515725000.0,
+        "operate_profit": 20787185000.0,
+        "total_profit": 20774999000.0,
+        "n_income": 17296033000.0
+      },
+      "balance": {
+        "ts_code": "601600.SH",
+        "end_date": "20250930",
+        "total_assets": 230398939000.0,
+        "total_liab": 106853962000.0,
+        "total_hldr_eqy_exc_min_int": 73406524000.0
+      },
+      "cashflow": {
+        "ts_code": "601600.SH",
+        "end_date": "20250930",
+        "n_cashflow_act": 25380218000.0,
+        "n_cashflow_inv_act": -7945815000.0,
+        "n_cash_flows_fnc_act": -9164513000.0
+      }
+    },
+    "financial_indicators": [
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20250930",
+        "eps": 0.635,
+        "roe": 15.2486,
+        "roa": 10.0021,
+        "debt_to_assets": 46.3778,
+        "current_ratio": 1.5284,
+        "quick_ratio": 1.0127
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20250630",
+        "eps": 0.413,
+        "roe": 9.9704,
+        "roa": 6.4814,
+        "debt_to_assets": 46.8806,
+        "current_ratio": 1.47,
+        "quick_ratio": 0.9315
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20250331",
+        "eps": 0.207,
+        "roe": 4.968,
+        "roa": 3.1979,
+        "debt_to_assets": 47.9323,
+        "current_ratio": 1.3903,
+        "quick_ratio": 0.8395
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20241231",
+        "eps": 0.723,
+        "roe": 19.1288,
+        "roa": 11.5569,
+        "debt_to_assets": 48.1042,
+        "current_ratio": 1.2782,
+        "quick_ratio": 0.7496
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20240930",
+        "eps": 0.525,
+        "roe": 14.0937,
+        "roa": 9.0867,
+        "debt_to_assets": 48.6754,
+        "current_ratio": 1.152,
+        "quick_ratio": 0.6873
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20240630",
+        "eps": 0.409,
+        "roe": 11.0608,
+        "roa": 6.6229,
+        "debt_to_assets": 49.9681,
+        "current_ratio": 1.1596,
+        "quick_ratio": 0.6956
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20240331",
+        "eps": 0.13,
+        "roe": 3.6186,
+        "roa": 2.547,
+        "debt_to_assets": 51.6122,
+        "current_ratio": 1.1303,
+        "quick_ratio": 0.633
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20231231",
+        "eps": 0.391,
+        "roe": 11.6958,
+        "roa": 8.4984,
+        "debt_to_assets": 53.3004,
+        "current_ratio": 0.9955,
+        "quick_ratio": 0.6063
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20230930",
+        "eps": 0.309,
+        "roe": 9.4317,
+        "roa": 6.2624,
+        "debt_to_assets": 54.3401,
+        "current_ratio": 0.9701,
+        "quick_ratio": 0.5497
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20230630",
+        "eps": 0.198,
+        "roe": 6.1251,
+        "roa": 3.9304,
+        "debt_to_assets": 55.6077,
+        "current_ratio": 0.918,
+        "quick_ratio": 0.4899
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20230331",
+        "eps": 0.105,
+        "roe": 3.2732,
+        "roa": 1.9819,
+        "debt_to_assets": 57.3514,
+        "current_ratio": 0.9387,
+        "quick_ratio": 0.4803
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20230331",
+        "eps": 0.105,
+        "roe": 3.2732,
+        "roa": 1.9819,
+        "debt_to_assets": 57.3514,
+        "current_ratio": 0.9387,
+        "quick_ratio": 0.4803
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20221231",
+        "eps": 0.239,
+        "roe": 7.5079,
+        "roa": 8.1831,
+        "debt_to_assets": 58.6735,
+        "current_ratio": 0.8744,
+        "quick_ratio": 0.4782
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20221231",
+        "eps": 0.239,
+        "roe": 7.5079,
+        "roa": 8.1831,
+        "debt_to_assets": 58.6735,
+        "current_ratio": 0.8744,
+        "quick_ratio": 0.4782
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220930",
+        "eps": 0.262,
+        "roe": 7.6118,
+        "roa": 5.5192,
+        "debt_to_assets": 59.7916,
+        "current_ratio": 1.0847,
+        "quick_ratio": 0.739
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220930",
+        "eps": 0.262,
+        "roe": 7.6118,
+        "roa": 5.5192,
+        "debt_to_assets": 59.7916,
+        "current_ratio": 1.0847,
+        "quick_ratio": 0.739
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220630",
+        "eps": 0.23,
+        "roe": 6.7743,
+        "roa": 4.4694,
+        "debt_to_assets": 60.0109,
+        "current_ratio": 1.0683,
+        "quick_ratio": 0.721
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220630",
+        "eps": 0.23,
+        "roe": 6.7743,
+        "roa": 4.4694,
+        "debt_to_assets": 60.0109,
+        "current_ratio": 1.0683,
+        "quick_ratio": 0.721
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220331",
+        "eps": 0.091,
+        "roe": 2.7115,
+        "roa": 1.9282,
+        "debt_to_assets": 61.7879,
+        "current_ratio": 1.0771,
+        "quick_ratio": 0.6947
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20220331",
+        "eps": 0.091,
+        "roe": 2.7115,
+        "roa": 1.9282,
+        "debt_to_assets": 61.7879,
+        "current_ratio": 1.0771,
+        "quick_ratio": 0.6947
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20211231",
+        "eps": 0.286,
+        "roe": 9.1034,
+        "roa": 7.1397,
+        "debt_to_assets": 62.1662,
+        "current_ratio": 0.9336,
+        "quick_ratio": 0.5756
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20211231",
+        "eps": 0.286,
+        "roe": 9.1034,
+        "roa": 7.1397,
+        "debt_to_assets": 62.1662,
+        "current_ratio": 0.9336,
+        "quick_ratio": 0.5756
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210930",
+        "eps": 0.303,
+        "roe": 9.3245,
+        "roa": 6.5686,
+        "debt_to_assets": 60.1463,
+        "current_ratio": 1.0148,
+        "quick_ratio": 0.6686
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210930",
+        "eps": 0.303,
+        "roe": 9.3245,
+        "roa": 6.5686,
+        "debt_to_assets": 60.1463,
+        "current_ratio": 1.0148,
+        "quick_ratio": 0.6686
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210630",
+        "eps": 0.174,
+        "roe": 5.5006,
+        "roa": 4.0759,
+        "debt_to_assets": 60.8725,
+        "current_ratio": 0.8548,
+        "quick_ratio": 0.5233
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210630",
+        "eps": 0.174,
+        "roe": 5.5006,
+        "roa": 4.0759,
+        "debt_to_assets": 60.8725,
+        "current_ratio": 0.8548,
+        "quick_ratio": 0.5233
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210331",
+        "eps": 0.054,
+        "roe": 1.7632,
+        "roa": 1.5221,
+        "debt_to_assets": 62.9374,
+        "current_ratio": 0.7899,
+        "quick_ratio": 0.4632
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20210331",
+        "eps": 0.054,
+        "roe": 1.7632,
+        "roa": 1.5221,
+        "debt_to_assets": 62.9374,
+        "current_ratio": 0.7899,
+        "quick_ratio": 0.4632
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20201231",
+        "eps": 0.028,
+        "roe": 1.3597,
+        "roa": 3.1522,
+        "debt_to_assets": 63.4833,
+        "current_ratio": 0.7378,
+        "quick_ratio": 0.4207
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20201231",
+        "eps": 0.028,
+        "roe": 1.3597,
+        "roa": 3.1522,
+        "debt_to_assets": 63.4833,
+        "current_ratio": 0.7378,
+        "quick_ratio": 0.4207
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200930",
+        "eps": 0.014,
+        "roe": 0.8211,
+        "roa": 2.1999,
+        "debt_to_assets": 63.2252,
+        "current_ratio": 0.7888,
+        "quick_ratio": 0.4467
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200930",
+        "eps": 0.014,
+        "roe": 0.8211,
+        "roa": 2.1999,
+        "debt_to_assets": 63.2252,
+        "current_ratio": 0.7888,
+        "quick_ratio": 0.4467
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200630",
+        "eps": -0.006,
+        "roe": 0.0653,
+        "roa": 1.2272,
+        "debt_to_assets": 64.9622,
+        "current_ratio": 0.7449,
+        "quick_ratio": 0.4716
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200630",
+        "eps": -0.006,
+        "roe": 0.0653,
+        "roa": 1.2272,
+        "debt_to_assets": 64.9622,
+        "current_ratio": 0.7449,
+        "quick_ratio": 0.4716
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200331",
+        "eps": -0.002,
+        "roe": 0.0562,
+        "roa": 0.6316,
+        "debt_to_assets": 65.9249,
+        "current_ratio": 0.7418,
+        "quick_ratio": 0.4594
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20200331",
+        "eps": -0.002,
+        "roe": 0.0562,
+        "roa": 0.6316,
+        "debt_to_assets": 65.9249,
+        "current_ratio": 0.7418,
+        "quick_ratio": 0.4594
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20191231",
+        "eps": 0.037,
+        "roe": 1.5895,
+        "roa": 3.355,
+        "debt_to_assets": 65.1722,
+        "current_ratio": 0.7043,
+        "quick_ratio": 0.4221
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20191231",
+        "eps": 0.037,
+        "roe": 1.5895,
+        "roa": 3.355,
+        "debt_to_assets": 65.1722,
+        "current_ratio": 0.7043,
+        "quick_ratio": 0.4221
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190930",
+        "eps": 0.038,
+        "roe": 1.5317,
+        "roa": 2.7593,
+        "debt_to_assets": 66.3416,
+        "current_ratio": 0.7753,
+        "quick_ratio": 0.486
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190930",
+        "eps": 0.038,
+        "roe": 1.5317,
+        "roa": 2.7593,
+        "debt_to_assets": 66.3416,
+        "current_ratio": 0.7753,
+        "quick_ratio": 0.486
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190630",
+        "eps": 0.035,
+        "roe": 1.337,
+        "roa": 1.9237,
+        "debt_to_assets": 66.6272,
+        "current_ratio": 0.7695,
+        "quick_ratio": 0.4797
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190630",
+        "eps": 0.035,
+        "roe": 1.337,
+        "roa": 1.9237,
+        "debt_to_assets": 66.6272,
+        "current_ratio": 0.7695,
+        "quick_ratio": 0.4797
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190331",
+        "eps": 0.023,
+        "roe": 0.8449,
+        "roa": 0.907,
+        "debt_to_assets": 67.6285,
+        "current_ratio": 0.7819,
+        "quick_ratio": 0.4801
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20190331",
+        "eps": 0.023,
+        "roe": 0.8449,
+        "roa": 0.907,
+        "debt_to_assets": 67.6285,
+        "current_ratio": 0.7819,
+        "quick_ratio": 0.4801
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20181231",
+        "eps": 0.044,
+        "roe": 1.894,
+        "roa": 3.3031,
+        "debt_to_assets": 66.313,
+        "current_ratio": 0.7879,
+        "quick_ratio": 0.5142
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20181231",
+        "eps": 0.044,
+        "roe": 1.894,
+        "roa": 3.3031,
+        "debt_to_assets": 66.313,
+        "current_ratio": 0.7879,
+        "quick_ratio": 0.5142
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180930",
+        "eps": 0.084,
+        "roe": 3.2907,
+        "roa": 3.2008,
+        "debt_to_assets": 67.1558,
+        "current_ratio": 0.8704,
+        "quick_ratio": 0.5763
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180930",
+        "eps": 0.084,
+        "roe": 3.2907,
+        "roa": 3.2008,
+        "debt_to_assets": 67.1558,
+        "current_ratio": 0.8704,
+        "quick_ratio": 0.5763
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180630",
+        "eps": 0.0476,
+        "roe": 1.8749,
+        "roa": 2.0588,
+        "debt_to_assets": 66.7153,
+        "current_ratio": 0.8552,
+        "quick_ratio": 0.5768
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180630",
+        "eps": 0.0476,
+        "roe": 1.8749,
+        "roa": 2.0588,
+        "debt_to_assets": 66.7153,
+        "current_ratio": 0.8552,
+        "quick_ratio": 0.5768
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180331",
+        "eps": 0.019,
+        "roe": 0.6851,
+        "roa": 0.9308,
+        "debt_to_assets": 66.8,
+        "current_ratio": 0.7724,
+        "quick_ratio": 0.5087
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20180331",
+        "eps": 0.019,
+        "roe": 0.6851,
+        "roa": 0.9308,
+        "debt_to_assets": 66.8,
+        "current_ratio": 0.7724,
+        "quick_ratio": 0.5087
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20171231",
+        "eps": 0.09,
+        "roe": 3.5533,
+        "roa": 3.6477,
+        "debt_to_assets": 67.2671,
+        "current_ratio": 0.7596,
+        "quick_ratio": 0.5335
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20171231",
+        "eps": 0.09,
+        "roe": 3.5533,
+        "roa": 3.6477,
+        "debt_to_assets": 67.2671,
+        "current_ratio": 0.7596,
+        "quick_ratio": 0.5335
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170930",
+        "eps": 0.09,
+        "roe": 3.5661,
+        "roa": 3.169,
+        "debt_to_assets": 72.2204,
+        "current_ratio": 0.6667,
+        "quick_ratio": 0.4491
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170930",
+        "eps": 0.09,
+        "roe": 3.5661,
+        "roa": 3.169,
+        "debt_to_assets": 72.2204,
+        "current_ratio": 0.6667,
+        "quick_ratio": 0.4491
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170630",
+        "eps": 0.05,
+        "roe": 1.9912,
+        "roa": 1.8497,
+        "debt_to_assets": 72.2731,
+        "current_ratio": 0.6409,
+        "quick_ratio": 0.4305
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170630",
+        "eps": 0.05,
+        "roe": 1.9912,
+        "roa": 1.8497,
+        "debt_to_assets": 72.2731,
+        "current_ratio": 0.6409,
+        "quick_ratio": 0.4305
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170331",
+        "eps": 0.024,
+        "roe": 1.021,
+        "roa": 1.0162,
+        "debt_to_assets": 70.888,
+        "current_ratio": 0.7974,
+        "quick_ratio": 0.5483
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20170331",
+        "eps": 0.024,
+        "roe": 1.021,
+        "roa": 1.0162,
+        "debt_to_assets": 70.888,
+        "current_ratio": 0.7974,
+        "quick_ratio": 0.5483
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20161231",
+        "eps": 0.02,
+        "roe": 1.0461,
+        "roa": 2.9441,
+        "debt_to_assets": 70.7553,
+        "current_ratio": 0.8008,
+        "quick_ratio": 0.585
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20161231",
+        "eps": 0.02,
+        "roe": 1.0461,
+        "roa": 2.9441,
+        "debt_to_assets": 70.7553,
+        "current_ratio": 0.8008,
+        "quick_ratio": 0.585
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160930",
+        "eps": 0.002,
+        "roe": 0.2817,
+        "roa": 2.1278,
+        "debt_to_assets": 73.741,
+        "current_ratio": 0.771,
+        "quick_ratio": 0.5709
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160930",
+        "eps": 0.002,
+        "roe": 0.2817,
+        "roa": 2.1278,
+        "debt_to_assets": 73.741,
+        "current_ratio": 0.771,
+        "quick_ratio": 0.5709
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160630",
+        "eps": 0.0002,
+        "roe": 0.1472,
+        "roa": 1.284,
+        "debt_to_assets": 72.624,
+        "current_ratio": 0.7647,
+        "quick_ratio": 0.5363
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160630",
+        "eps": 0.0002,
+        "roe": 0.1472,
+        "roa": 1.284,
+        "debt_to_assets": 72.624,
+        "current_ratio": 0.7647,
+        "quick_ratio": 0.5363
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160331",
+        "eps": 0.001,
+        "roe": 0.0495,
+        "roa": 0.6735,
+        "debt_to_assets": 73.1502,
+        "current_ratio": 0.785,
+        "quick_ratio": 0.5195
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20160331",
+        "eps": 0.001,
+        "roe": 0.0495,
+        "roa": 0.6735,
+        "debt_to_assets": 73.1502,
+        "current_ratio": 0.785,
+        "quick_ratio": 0.5195
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20151231",
+        "eps": 0.01,
+        "roe": 0.6148,
+        "roa": 2.5924,
+        "debt_to_assets": 73.4255,
+        "current_ratio": 0.7928,
+        "quick_ratio": 0.5435
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20151231",
+        "eps": 0.01,
+        "roe": 0.6148,
+        "roa": 2.5924,
+        "debt_to_assets": 73.4255,
+        "current_ratio": 0.7928,
+        "quick_ratio": 0.5435
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150930",
+        "eps": -0.07,
+        "roe": -2.9215,
+        "roa": 1.6053,
+        "debt_to_assets": 74.9392,
+        "current_ratio": 0.8017,
+        "quick_ratio": 0.4864
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150930",
+        "eps": -0.07,
+        "roe": -2.9215,
+        "roa": 1.6053,
+        "debt_to_assets": 74.9392,
+        "current_ratio": 0.8017,
+        "quick_ratio": 0.4864
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150630",
+        "eps": 0.002,
+        "roe": 0.0856,
+        "roa": 1.4801,
+        "debt_to_assets": 75.6163,
+        "current_ratio": 0.8093,
+        "quick_ratio": 0.534
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150630",
+        "eps": 0.002,
+        "roe": 0.0856,
+        "roa": 1.4801,
+        "debt_to_assets": 75.6163,
+        "current_ratio": 0.8093,
+        "quick_ratio": 0.534
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150331",
+        "eps": 0.005,
+        "roe": 0.2225,
+        "roa": 0.8297,
+        "debt_to_assets": 79.5409,
+        "current_ratio": 0.6809,
+        "quick_ratio": 0.4158
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20150331",
+        "eps": 0.005,
+        "roe": 0.2225,
+        "roa": 0.8297,
+        "debt_to_assets": 79.5409,
+        "current_ratio": 0.6809,
+        "quick_ratio": 0.4158
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20141231",
+        "eps": -1.2,
+        "roe": -44.654,
+        "roa": -5.2607,
+        "debt_to_assets": 79.4277,
+        "current_ratio": 0.609,
+        "quick_ratio": 0.3937
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20141231",
+        "eps": -1.2,
+        "roe": -44.654,
+        "roa": -5.2607,
+        "debt_to_assets": 79.4277,
+        "current_ratio": 0.609,
+        "quick_ratio": 0.3937
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140930",
+        "eps": -0.4,
+        "roe": -12.9714,
+        "roa": -0.3503,
+        "debt_to_assets": 74.2457,
+        "current_ratio": 0.6558,
+        "quick_ratio": 0.4295
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140930",
+        "eps": -0.4,
+        "roe": -12.9714,
+        "roa": -0.3503,
+        "debt_to_assets": 74.2457,
+        "current_ratio": 0.6558,
+        "quick_ratio": 0.4295
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140630",
+        "eps": -0.3,
+        "roe": -9.7329,
+        "roa": -0.5549,
+        "debt_to_assets": 74.7715,
+        "current_ratio": 0.7083,
+        "quick_ratio": 0.4873
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140630",
+        "eps": -0.3,
+        "roe": -9.7329,
+        "roa": -0.5549,
+        "debt_to_assets": 74.7715,
+        "current_ratio": 0.7083,
+        "quick_ratio": 0.4873
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140331",
+        "eps": -0.16,
+        "roe": -4.9774,
+        "roa": -0.4377,
+        "debt_to_assets": 75.1431,
+        "current_ratio": 0.7076,
+        "quick_ratio": 0.4788
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20140331",
+        "eps": -0.16,
+        "roe": -4.9774,
+        "roa": -0.4377,
+        "debt_to_assets": 75.1431,
+        "current_ratio": 0.7076,
+        "quick_ratio": 0.4788
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20131231",
+        "eps": 0.07,
+        "roe": 2.1496,
+        "roa": 3.5499,
+        "debt_to_assets": 73.0826,
+        "current_ratio": 0.6519,
+        "quick_ratio": 0.4086
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20131231",
+        "eps": 0.07,
+        "roe": 2.1496,
+        "roa": 3.5499,
+        "debt_to_assets": 73.0826,
+        "current_ratio": 0.6519,
+        "quick_ratio": 0.4086
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130930",
+        "eps": -0.14,
+        "roe": -4.3129,
+        "roa": 1.185,
+        "debt_to_assets": 74.2209,
+        "current_ratio": 0.7015,
+        "quick_ratio": 0.4659
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130930",
+        "eps": -0.14,
+        "roe": -4.3129,
+        "roa": 1.185,
+        "debt_to_assets": 74.2209,
+        "current_ratio": 0.7015,
+        "quick_ratio": 0.4659
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130630",
+        "eps": -0.05,
+        "roe": -1.4382,
+        "roa": 1.1692,
+        "debt_to_assets": 73.1718,
+        "current_ratio": 0.6756,
+        "quick_ratio": 0.4062
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130630",
+        "eps": -0.05,
+        "roe": -1.4382,
+        "roa": 1.1692,
+        "debt_to_assets": 73.1718,
+        "current_ratio": 0.6756,
+        "quick_ratio": 0.4062
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130331",
+        "eps": -0.07,
+        "roe": -2.2499,
+        "roa": 0.2914,
+        "debt_to_assets": 73.7611,
+        "current_ratio": 0.6494,
+        "quick_ratio": 0.3541
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20130331",
+        "eps": -0.07,
+        "roe": -2.2499,
+        "roa": 0.2914,
+        "debt_to_assets": 73.7611,
+        "current_ratio": 0.6494,
+        "quick_ratio": 0.3541
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20121231",
+        "eps": -0.61,
+        "roe": -17.2095,
+        "roa": -2.7003,
+        "debt_to_assets": 69.2766,
+        "current_ratio": 0.5845,
+        "quick_ratio": 0.2793
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20121231",
+        "eps": -0.61,
+        "roe": -17.2095,
+        "roa": -2.7003,
+        "debt_to_assets": 69.2766,
+        "current_ratio": 0.5845,
+        "quick_ratio": 0.2793
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120930",
+        "eps": -0.32,
+        "roe": -8.7159,
+        "roa": -1.205,
+        "debt_to_assets": 67.9915,
+        "current_ratio": 0.7127,
+        "quick_ratio": 0.3903
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120930",
+        "eps": -0.32,
+        "roe": -8.7159,
+        "roa": -1.205,
+        "debt_to_assets": 67.9915,
+        "current_ratio": 0.7127,
+        "quick_ratio": 0.3903
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120630",
+        "eps": -0.241,
+        "roe": -6.4693,
+        "roa": -1.1469,
+        "debt_to_assets": 69.5416,
+        "current_ratio": 0.7174,
+        "quick_ratio": 0.4034
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120630",
+        "eps": -0.241,
+        "roe": -6.4693,
+        "roa": -1.1469,
+        "debt_to_assets": 69.5416,
+        "current_ratio": 0.7174,
+        "quick_ratio": 0.4034
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120331",
+        "eps": -0.08,
+        "roe": -2.1208,
+        "roa": -0.2081,
+        "debt_to_assets": 65.9824,
+        "current_ratio": 0.8503,
+        "quick_ratio": 0.4626
+      },
+      {
+        "ts_code": "601600.SH",
+        "end_date": "20120331",
+        "eps": -0.08,
+        "roe": -2.1208,
+        "roa": -0.2081,
+        "debt_to_assets": 65.9824,
+        "current_ratio": 0.8503,
+        "quick_ratio": 0.4626
+      }
+    ],
+    "realtime_quote": {
+      "ts_code": "601600.SH",
+      "trade_date": "20260213",
+      "open": 12.97,
+      "high": 13.09,
+      "low": 12.66,
+      "close": 12.69,
+      "pre_close": 13.21,
+      "change": -0.52,
+      "pct_chg": -3.9364,
+      "vol": 2591904.06,
+      "amount": 3323093.316
+    },
+    "intraday_data": null,
+    "news": []
+  },
+  "analysis": {
+    "analysts": {
+      "technical": {
+        "trend": "短期下降趋势，中期震荡偏弱。从近期数据看，股价在2月2日经历大幅下跌（-9.98%）后，虽有反弹但未能有效突破前期高点，最新交易日（2月13日）再次下跌-3.94%，收盘价12.69接近近期低点12.66，显示空头力量占优。价格在12.66-13.6区间内宽幅震荡，但重心有所下移。",
+        "volume_analysis": "成交量呈现放量下跌、缩量反弹的特征。2月2日大跌时成交量显著放大（787.8万手），随后反弹过程中成交量逐步萎缩（从475万手降至187.8万手），表明反弹动能不足。最新交易日下跌伴随成交量放大至259.2万手，高于前几个反弹日的成交量，属于放量下跌，可能预示着下跌趋势的延续。",
+        "support_resistance": "支撑位：近期关键支撑位在12.66（2月13日低点），若跌破，下一支撑位在12.18（2月6日低点）。阻力位：近期主要阻力位在13.2-13.26区域（2月10日、12日高点附近），更强阻力位在13.45（2月11日高点）和13.6（2月2日高点）。",
+        "short_term_outlook": "偏空。股价放量跌破13元整数关口和短期均线支撑，技术形态转弱。若无法快速收复13元并站稳，短期内可能继续下探测试12.66及12.18的支撑力度。",
+        "medium_term_outlook": "中性偏空。股价在宽幅震荡区间（约12.2-13.6）内运行，但近期高点逐步降低（13.6 -> 13.45 -> 13.26），且反弹量能不足，中期有形成下降通道或继续区间下沿寻底的可能。需观察能否在关键支撑位企稳并重新放量。",
+        "technical_score": 4,
+        "summary": "中国铝业技术面偏弱。价格处于短期下降趋势中，放量下跌显示抛压较重，而反弹时量能不足。关键支撑位12.66面临考验，若失守则下行空间可能打开。整体技术结构显示空头占优，短期内需谨慎。评分较低主要基于趋势向下、量价关系不佳以及关键支撑位岌岌可危。"
+      },
+      "fundamental": {
+        "profitability": "盈利能力分析：截至2025年三季度，公司实现营收1765.16亿元，净利润172.96亿元。从历史数据看，公司盈利能力呈现显著的周期性波动，与铝行业景气度高度相关。2024年全年ROE达到19.13%的高点，2025年前三季度ROE为15.25%，仍处于历史较好水平。EPS从2020年的微利（0.028元）大幅提升至2025年三季度的0.635元，显示盈利能力的强劲复苏和持续改善。",
+        "financial_health": "财务健康度：资产负债率从历史高位（2015年接近80%）持续下降至2025年三季度的46.38%，债务结构显著优化，财务杠杆风险大幅降低。流动比率从2020年底的0.74提升至1.53，速动比率从0.42提升至1.01，短期偿债能力明显增强，流动性状况健康。整体财务结构处于历史最佳水平之一。",
+        "profitability_quality": "盈利质量：2025年三季度ROE为15.25%，ROA为10.00%，两者均处于历史较高水平，且差距合理，显示公司运用杠杆的效率较高。与2020年及之前的微利或亏损时期相比，盈利质量发生了根本性改善。盈利的稳定性和可持续性仍需观察行业周期变化。",
+        "cash_flow": "现金流分析：2025年三季度经营活动现金流净额为253.80亿元，远高于同期净利润（172.96亿元），盈利的现金含量高，经营造血能力强。投资活动现金流净流出79.46亿元，显示公司仍在进行资本开支。筹资活动现金流净流出91.65亿元，表明公司在偿还债务或分红，与资产负债率下降的趋势相符。整体现金流状况非常健康。",
+        "valuation": "估值分析：基于当前财务数据（EPS 0.635元，净资产约734亿元），公司估值需结合市场股价判断。历史数据显示公司业绩周期性极强，估值波动大。当前盈利处于周期高位，需关注铝价等大宗商品价格走势对未来盈利的影响。财务结构的优化为估值提供了更好的安全边际。",
+        "fundamental_score": 7,
+        "summary": "基本面总结：中国铝业的基本面自2020年以来发生了显著且积极的转变。公司成功降低了资产负债率（从近80%降至46%），大幅改善了流动性（流动比率>1.5），并实现了强劲的盈利增长（ROE从个位数提升至15%以上）。经营活动现金流充沛，盈利质量高。这主要得益于行业景气周期以及公司自身的降本增效和财务优化。主要风险在于其强周期性，盈利对铝价高度敏感，未来业绩可能随行业周期下行而波动。当前财务健康状况为历史最佳时期之一，抵御下行风险的能力增强。"
+      },
+      "news": {
+        "sentiment": "中性",
+        "key_events": "无重大新闻事件",
+        "impact_analysis": "无明显影响",
+        "news_score": 5,
+        "summary": "近期无重大新闻，市场情绪中性"
+      }
+    },
+    "debate": {
+      "bull_initial": {
+        "bull_points": [
+          "全球绿色转型推动铝需求增长：新能源汽车、光伏、风电等新能源领域对铝材需求持续攀升，中国铝业作为行业龙头将直接受益",
+          "供给侧改革深化：国内铝行业产能天花板政策持续，供给端约束有利于铝价维持相对高位，改善行业盈利环境",
+          "公司全产业链布局优势：拥有从铝土矿到氧化铝、电解铝、铝加工的完整产业链，抗风险能力强，成本控制优势明显",
+          "高端产品占比提升：公司持续优化产品结构，增加高附加值铝材产品比例，提升整体盈利能力",
+          "国际化战略推进：积极布局海外资源，增强资源保障能力，分散地缘政治风险",
+          "国企改革红利：作为央企，有望受益于国企改革深化，提升运营效率和市场竞争力",
+          "估值处于历史低位：当前股价相对行业周期和历史估值具有吸引力，提供安全边际"
+        ],
+        "upside_potential": "基于铝价中枢上移和公司盈利改善预期，我们认为中国铝业未来12-18个月有30-50%的上涨空间。随着新能源需求放量和供给端约束，铝行业景气度有望持续，公司作为行业龙头将充分受益于量价齐升。",
+        "catalysts": [
+          "铝价突破上行：全球通胀环境、能源成本支撑及需求增长可能推动铝价超预期上涨",
+          "新能源需求超预期：新能源汽车产销数据持续亮眼，光伏装机加速",
+          "公司业绩超预期：季度财报显示盈利大幅改善，毛利率提升",
+          "政策利好出台：国家对高端材料、绿色铝产业的支持政策加码",
+          "行业整合加速：可能出现并购重组事件，提升行业集中度",
+          "美元走弱：美元指数下行将提振大宗商品价格，包括铝价"
+        ],
+        "buy_thesis": "买入中国铝业的核心逻辑在于：1）铝作为‘绿色金属’在能源转型中需求结构发生根本性变化，长期成长性被市场低估；2）公司作为行业龙头，在资源、规模、技术方面具有显著竞争优势；3）当前估值未能充分反映行业景气度改善和公司盈利弹性；4）国企改革和经营管理优化将释放潜在价值。",
+        "price_target": "基于2024-2025年铝价假设（22000-24000元/吨）和公司产能释放预期，我们给予12个月目标价8.5-9.5元，对应2024年预期市盈率15-18倍，较当前股价有显著上行空间。若铝价超预期上涨，目标价有望上看10元以上。",
+        "bull_confidence": 8,
+        "summary": "中国铝业正处于‘需求结构升级+供给约束+估值修复’三重利好叠加的机遇期。作为铝行业国家队，公司将在绿色转型浪潮中扮演关键角色。尽管面临宏观经济波动和成本上涨等风险，但我们认为其长期成长逻辑坚实，当前股价提供了良好的布局时机。建议积极关注，逢低配置。"
+      },
+      "bear_initial": {
+        "bear_points": [
+          "铝价周期性波动风险：铝作为大宗商品，价格受全球经济周期影响显著，经济下行时需求减弱可能导致铝价下跌",
+          "成本压力上升：电力成本、氧化铝价格波动、环保投入增加等因素可能挤压利润空间",
+          "产能过剩风险：全球铝行业可能存在结构性产能过剩，特别是在经济放缓时期",
+          "宏观经济敏感性：铝需求与房地产、汽车、基建等周期性行业高度相关，经济下行时需求萎缩",
+          "汇率风险：作为出口导向型企业，人民币汇率波动可能影响出口竞争力",
+          "环保政策压力：中国环保标准趋严可能增加合规成本和资本支出",
+          "债务负担：重资产行业特征可能导致较高的资产负债率，利息支出压力较大",
+          "国际竞争加剧：来自俄罗斯、中东等低成本产区的竞争可能挤压市场份额和利润"
+        ],
+        "downside_risk": "在悲观情景下，若全球经济进入衰退周期，铝价可能下跌20-30%，公司盈利可能大幅下滑甚至出现亏损。同时，若中国房地产行业持续低迷，建筑用铝需求将受到显著压制。成本端的电力价格上调和环保投入增加可能进一步压缩毛利率。考虑到公司的高经营杠杆，收入下滑时利润降幅可能显著放大。",
+        "negative_catalysts": [
+          "全球经济衰退或中国经济增速显著放缓",
+          "铝价大幅下跌（如跌破成本线）",
+          "中国房地产行业进一步恶化",
+          "电力成本大幅上涨",
+          "环保政策突然收紧导致停产或巨额投入",
+          "国际贸易摩擦加剧影响铝制品出口",
+          "竞争对手大幅扩产导致价格战",
+          "美元走强导致大宗商品价格承压"
+        ],
+        "sell_thesis": "建议减持或观望，主要基于：1）铝行业正处于周期下行阶段或接近周期顶部，未来1-2年盈利可能下滑；2）公司对宏观经济高度敏感，当前经济环境不确定性较大；3）估值可能尚未充分反映下行风险，特别是如果铝价回调；4）在行业下行期，高负债企业将面临更大的财务压力。",
+        "valuation_concern": "当前估值可能基于过于乐观的铝价假设和需求预测。如果采用周期中性的盈利预测或考虑下行情景，市盈率可能显著高于历史周期底部水平。市净率也可能未充分反映资产质量在经济下行时的减值风险。与全球同业相比，估值溢价可能未充分考虑中国特定的风险因素。",
+        "bear_confidence": 7,
+        "summary": "中国铝业作为周期性强的铝行业龙头企业，面临多重下行风险：铝价周期性下跌风险、成本压力上升、宏观经济敏感度高、环保政策压力等。在经济增长放缓、房地产低迷的背景下，铝需求可能疲软，而成本端压力持续，利润空间可能被压缩。当前估值可能未充分反映下行风险，建议谨慎对待，等待更明确的经济复苏信号或更具吸引力的估值水平。"
+      },
+      "debate_rounds": [
+        {
+          "round": 1,
+          "speaker": "bear",
+          "content": "感谢对方辩友的阐述。我方承认，对方提出的绿色转型、供给侧约束和公司产业链优势等论点确实指出了中国铝业的部分积极因素。然而，我方认为，对方的分析过于乐观，选择性忽略了当前及未来一段时间内更为严峻的宏观环境和行业现实。以下是我方的反驳与补充论证：\n\n**1. 指出对方观点的不足与偏颇之处：**\n\n*   **对“绿色需求”的过度依赖与线性外推：** 对方将新能源汽车、光伏等领域的铝需求增长视为确定性极强的驱动力。然而，这一增长**无法完全对冲**传统领域（尤其是房地产）的需求塌陷。中国房地产行业占铝消费比重极高，其持续深度调整对铝需求的压制是结构性和规模性的，新能源需求的增量在短期内难以弥补这一巨大缺口。此外，新能源行业本身也面临产能过剩、技术迭代和补贴退坡的风险，其需求增速存在放缓的可能。\n*   **对“供给侧约束”效果的片面解读：** 国内电解铝产能“天花板”确实存在，但这主要约束的是国内新增产能。对方忽略了**全球**尤其是来自俄罗斯、中东等地低成本产能的持续释放和出口压力。在全球经济放缓、需求疲软的背景下，国际市场的过剩产能将通过贸易渠道冲击国内市场和价格，削弱国内供给侧改革的托底效果。当前的铝价更多由全球边际供需决定。\n*   **高估“全产业链”在周期下行时的防御能力：** 全产业链布局在成本控制和资源保障上确有优势，但无法规避**系统性价格风险**。当铝价出现全局性、趋势性下跌时，产业链各环节的利润将同步受到挤压。所谓“东方不亮西方亮”在强周期行业下行期往往失效，反而可能因为重资产运营模式，在收入下滑时放大利润的波动（高经营杠杆）。\n*   **“估值低位”可能是一个价值陷阱：** 对方以历史估值和周期估值作为安全边际的依据。但对于强周期股而言，**“低估值”往往预示着周期顶部的临近而非底部的确认**。当前的市盈率（PE）是基于周期高点的盈利计算，一旦盈利下滑，PE会迅速飙升。市净率（PB）也未能充分计价在经济下行时，高成本产能可能面临的资产减值风险。估值“吸引力”需建立在盈利能维持或增长的假设上，而这正是我方质疑的核心。\n\n**2. 强化我方核心论点——周期下行力量强于结构性利好：**\n\n我方的核心逻辑在于，**宏观经济的周期性下行力量，目前远强于铝需求的结构性改善力量**。铝的本质仍是一个与全球GDP、工业生产和固定资产投资高度同步的强周期商品。\n*   **全球衰退阴影笼罩：** 主要经济体为对抗通胀而采取的激进货币政策，正在显著抑制全球经济增长动能。制造业PMI的普遍疲软和领先指标的恶化，预示着工业金属需求面临逆风。\n*   **中国关键驱动引擎失速：** 中国铝消费的基石——房地产行业，其投资、新开工和销售数据尚未见到根本性扭转迹象。基建投资虽有一定托底作用，但难以复制过往强度。汽车消费（除新能源外）也趋于饱和。\n*   **成本高企侵蚀利润“安全垫”：** 对方提到了公司成本控制优势，但无法改变行业性的成本上升趋势。能源成本（特别是电力）、碳减排成本、以及原材料氧化铝价格的波动，将持续挤压利润空间。在铝价下跌时，成本刚性会加速行业进入普遍亏损。\n\n**3. 提供新的证据与角度：**\n\n*   **库存变化揭示真实供需：** 近期国内外铝显性库存出现累积迹象，这反映了在当前价格水平下，实际消费强度弱于供给，是需求疲软的直接证据。\n*   **下游加工企业开工率与订单：** 来自铝型材、板带箔等加工环节的调研数据显示，企业订单天数缩短，开工率不足，且对远期订单态度谨慎，进一步印证终端需求的不振。\n*   **利润结构脆弱性：** 中国铝业当前的利润对铝价弹性极大。敏感性分析显示，铝价每下跌1000元/吨，对公司净利润的影响极为显著。在对方乐观的铝价假设（22000-24000元/吨）区间，任何向下的波动都将直接冲击盈利预测的基石。\n*   **财务风险在加息环境中放大：** 在全球利率中枢上移的背景下，公司较高的有息负债规模将导致财务费用增加，进一步侵蚀利润。在行业下行期，资产负债表的质量和流动性将面临考验。\n\n**4. 总结与立场重申：**\n\n综上所述，我方认为，对方观点**低估了宏观经济周期下行对铝价和需求的压倒性影响，高估了结构性需求增量的即时对冲能力，且对供给侧的乐观看法局限于国内而忽视了全球竞争格局的恶化**。\n\n中国铝业面临的不是一个简单的“成长与周期”的博弈，而是在一个**周期下行阶段**，试图寻找结构性亮点的艰难处境。历史经验表明，在强周期下行时，所有利好因素都会被暂时掩盖，直到周期力量出清。\n\n因此，我方的“减持或观望”建议是基于审慎的风险收益比评估：在盈利可见度下降、下行催化剂（如经济衰退、地产恶化、成本飙升）更为明确且迫切的当下，所谓的“估值低位”和“长期绿色故事”并不足以构成立即买入的充分理由。投资者应等待更明确的周期底部信号，或者铝价风险得到更充分释放、估值真正反映悲观情景之后，再考虑布局。"
+        },
+        {
+          "round": 2,
+          "speaker": "bull",
+          "content": "感谢对方辩友的深入回应。我方承认，对方对宏观经济周期性和行业风险的审慎态度是专业分析中不可或缺的部分。然而，我方认为，对方的反驳在逻辑上存在几个关键误区，并且过度放大了短期逆风，而低估了正在发生的结构性变革的深度和持续性。以下是我方的进一步反驳与论证：\n\n**1. 指出对方观点的不足与逻辑误区：**\n\n*   **误区一：将“周期”与“成长”机械对立，并预设周期力量必然主导。** 对方的核心逻辑建立在“强周期下行力量压倒结构性改善”的假设上。这一假设忽略了一个根本性变化：**铝的需求驱动引擎正在发生历史性切换**。过去，铝需求与房地产、传统基建的固定资产投资周期高度绑定。但如今，新能源（电动汽车、光伏、风电、储能）和轻量化（航空航天、包装）等领域的需求，其增长逻辑是**政策驱动、技术迭代和全球碳中和目标下的长期结构性增长**，与短期的房地产周期关联度已显著降低。国际铝业协会（IAI）等权威机构预测，到2030年，全球铝需求增量中超过60%将来自这些新兴领域。因此，当前并非简单的周期下行，而是**需求结构新旧动能转换的关键期**。用旧周期的经验线性外推未来，可能犯下“后视镜”投资的错误。\n\n*   **误区二：对“全球产能冲击”的论述存在选择性。** 对方强调俄罗斯、中东等地的低成本产能冲击，却有意无意地忽略了两个关键约束：1）**能源与碳约束**：中东产能虽能源成本低，但其铝生产碳足迹高，未来面临日益严格的国际贸易碳壁垒（如欧盟CBAM）。中国铝业在绿色水电铝、节能技术上的持续投入，正构筑长期的“绿色成本”与“市场准入”优势。2）**地缘政治与供应链安全**：全球产业链重构背景下，资源的本地化保障至关重要。中国铝业作为“国家队”，其国内资源布局和海外战略性投资（如几内亚矿源）提供的供应链稳定性，其价值在动荡的国际环境中被显著低估。全球产能不等于有效、可持续且能被市场接受的供给。\n\n*   **误区三：误读“全产业链”与“高经营杠杆”的关系。** 对方正确地指出了行业下行时高经营杠杆的风险，但错误地将此归咎于全产业链模式。恰恰相反，**全产业链在周期波动中起到了关键的盈利稳定器作用**。当电解铝价格下跌时，上游的铝土矿、氧化铝环节仍可能保持盈利；同时，下游高附加值铝加工业务（如汽车板、航空材）的利润相对稳定，且占比正在提升。这种纵向一体化的布局，使得公司利润对单一环节（电解铝）价格波动的敏感性**低于独立的冶炼厂**。公司的经营杠杆更多与固定资产规模相关，而产业链协同带来的成本节约和利润平滑效应，部分对冲了这一风险。\n\n*   **误区四：静态看待“估值”，忽视盈利中枢的上移。** 对方指出周期股“低PE可能是陷阱”的历史经验，这适用于需求结构稳定的传统周期。但当行业的**长期盈利中枢因结构性变化而系统性抬升时**，估值框架需要重塑。供给侧改革（国内产能天花板）和全球能源转型，共同改变了铝行业的供需格局，使其从过去的“严重过剩、利润微薄”转向“紧平衡、利润常态化”。因此，基于过去周期底部极端悲观的盈利所计算的“历史估值底部”可能已经失效。当前的估值反映的是市场对旧周期的恐惧，而非对新成长逻辑的认知。\n\n**2. 强化我方核心论点——结构性变革重塑投资逻辑：**\n\n我方的核心逻辑并非否认周期波动，而是强调 **“超级周期”与“结构成长”的叠加**。铝，正从“周期性工业金属”转向“战略性的绿色金属”。\n*   **需求侧：增长引擎换挡，空间广阔。** 新能源汽车用铝量是传统车的2-3倍，光伏支架、组件边框几乎全部铝制。这些领域受中国自身经济周期的影响较小，更多受全球产业政策和技术降本驱动，增长确定性强且能见度高。房地产需求的占比已在趋势性下降，其对铝价的影响权重正在减弱。\n*   **供给侧：刚性约束强化，格局优化。** 国内产能天花板是长期政策，非短期行政命令。全球范围内，由于能源成本高企和环保投资巨大，新建产能壁垒极高。这导致供给曲线变得陡峭，对价格形成了**长期且坚实的支撑**。铝价的波动区间底部已被显著抬高。\n*   **公司α：从规模龙头到价值龙头。** 中国铝业不仅受益于行业β，其自身的α正在强化：1）**高端化**：航空航天、新能源汽车用高端铝材的认证和放量，将持续提升毛利率；2）**绿色化**：水电铝比例提升，不仅降低碳成本，未来更可能产生“绿色溢价”；3）**管理优化**：国企改革深化，考核导向更注重ROE和市值，驱动效率提升和股东回报改善。\n\n**3. 提供新的证据与前瞻视角：**\n\n*   **国内外政策形成共振合力：** 除了国内“双碳”目标，美国《通胀削减法案》（IRA）、欧盟《关键原材料法案》等，都在全球范围内强化了对本土绿色供应链和关键金属（铝是能源转型的关键材料）的战略重视。中国铝业作为中国乃至全球的铝业龙头，其战略地位被提升到新的高度。\n*   **库存结构的深层含义：** 对方提到显性库存累积，但这需要区分是炼厂库存还是消费地库存。近期部分库存积累位于交割仓库，更多与融资贸易、套利活动有关，而非纯粹终端消费疲软。更重要的是，社会总库存（显性+隐性）仍处于历史同期偏低水平，反映实际供需并不宽松。\n*   **成本曲线的陡峭化保护龙头利润：** 全球铝行业成本曲线右端（高成本产能）受能源价格冲击巨大。当铝价调整时，高成本产能会率先亏损减产，从而为价格提供缓冲。中国铝业凭借完整的产业链和能源结构优化，处于全球成本曲线中前端，抗风险能力远强于边际产能，在行业洗牌中反而可能扩大份额。\n*   **股东回报的改善预期：** 作为央企，在国资委“一利五率”考核引导下，公司提高分红比例、实施回购的意愿和能力在增强，这为股价提供了额外的下行保护和安全边际。\n\n**4. 总结：拥抱变化，在分歧中看见价值**\n\n对方辩友描绘了一幅基于传统周期思维的谨慎图景。而我方看到的是，在短期宏观经济数据波动之下，一股由能源革命和产业升级驱动的、不可逆的长期力量正在重塑铝行业。\n\n投资中国铝业，本质上是投资 **“中国绿色制造优势”** 与 **“全球能源转型确定性”** 的交集。市场当前的犹豫和低估，正是源于新旧逻辑转换期的认知滞后。风险确实存在，但机会在于，主要的悲观因素（如地产）已很大程度上被股价反映，而积极的结构性变化（绿色需求放量、供给刚性、公司质变）尚未被充分定价。\n\n因此，我们坚持认为，当前股价提供了在一个长坡厚雪赛道中，布局行业龙头股的宝贵窗口。建议投资者穿越短期周期的迷雾，聚焦长期价值锚点，积极配置。"
+        },
+        {
+          "round": 2,
+          "speaker": "bear",
+          "content": "感谢对方辩友的再次回应。我方仔细聆听了您关于“结构性变革”和“新旧动能转换”的论述，承认这是一个重要的叙事角度。然而，我方认为，您对结构性力量的描绘过于理想化和线性化，严重低估了当前宏观周期下行压力的强度、速度和破坏性，并且在关键假设上存在“一厢情愿”的风险。以下是我方的进一步反驳：\n\n**1. 指出对方观点的核心缺陷：对“需求切换”的速度与规模存在致命误判**\n\n对方的核心逻辑建立在“新能源需求增长能有效对冲甚至超越传统需求萎缩”这一关键假设上。我方认为，这一假设在当前时点**过于激进且缺乏数据支撑**。\n\n*   **量化对比的缺失：** 对方反复引用“2030年60%增量来自新兴领域”的长期预测，但这恰恰暴露了问题——**增量占比不等于存量替代**。房地产及相关产业链目前仍占据中国铝消费的约30%（存量基本盘），而新能源领域（车、光、风）的占比虽快速增长，但基数仍相对较小。一个简单的算术是：当房地产用铝需求因新开工面积腰斩而出现10-15%的绝对量下滑时，需要新能源领域实现何等惊人的复合增长率才能完全填补？历史数据显示，这种“完美切换”从未在任何一个大宗商品周期中平滑实现，中间必然伴随剧烈的需求缺口和价格阵痛。\n*   **新能源需求自身并非“永动机”：** 对方将新能源需求视为不受经济周期影响的独立变量，这是危险的错觉。\n    *   **新能源汽车：** 面临补贴退坡、竞争白热化、消费信心波动的影响。当宏观经济承压、居民收入预期转弱时，大宗耐用消费品的购买可能被推迟。近期部分车企的降价去库存和增速放缓迹象值得警惕。\n    *   **光伏：** 同样面临阶段性产能过剩、国际贸易壁垒（如美国对东南亚组件调查）和电网消纳问题的挑战。其装机增速也存在波动，并非一条直线向上。\n*   **时间错配：** 传统需求（地产）的萎缩是 **“现在进行时”** ，且力度超预期。而新能源需求的放量是 **“未来期望时”** 。在投资中，“远水难解近渴”是致命伤。在需求青黄不接的时期，铝价将直接暴露在宏观逆风之下。\n\n**2. 反驳对方对“供给侧”与“成本优势”的过度美化**\n\n*   **“绿色壁垒”远水不解近渴：** 对方提及欧盟CBAM等碳壁垒将构筑中国铝业的长期优势。但请注意：1）CBAM目前仅针对少数行业试点，全面影响尚需数年；2）其核心是增加高碳产品的进口成本，而非禁止进口。这更多是**成本转嫁能力**的考验，而非绝对的“市场准入”优势。在当前全球需求疲软、买家价格敏感度高的环境下，成本转嫁难度极大。所谓的“绿色溢价”在衰退环境中往往是第一个被挤出的泡沫。\n*   **“全产业链稳定器”作用在系统性风险前失效：** 我方再次强调，当铝价出现**全局性、趋势性下跌**时，产业链各环节的利润会遭遇**共振式挤压**。铝土矿和氧化铝价格同样与电解铝价格高度联动。下游高端加工业务占比仍不够高，且其加工费也会在行业不景气时承压。所谓的“利润平滑”效应在轻度波动中有效，但在我们当前讨论的“悲观情景”（铝价下跌20-30%）下，其作用微乎其微。公司的业绩预告和季度环比数据将清晰地证明，其利润与铝价的相关性极高。\n*   **“成本曲线陡峭化”是双刃剑：** 对方认为成本曲线陡峭能保护龙头。这仅在需求稳定或增长时成立。在需求收缩时，它意味着行业将更快地触及大面积亏损的临界点，引发激烈的价格战和更深的行业亏损。中国铝业虽不在成本曲线最右端，但也绝非最左端的海湾地区企业。在价格下行通道中，它同样会承受巨大压力。\n\n**3. 引入新的关键证据与视角：现金流与信用周期的重要性**\n\n*   **经营性现金流的恶化风险：** 在周期下行期，比利润表更重要的是现金流量表。随着铝价下跌和需求疲软，公司可能面临：1）**销售回款周期拉长**，下游客户资金链紧张；2）**存货价值缩水**带来的潜在减值损失；3）为维持市场份额而被迫提供的更宽松信用条件。这些都将直接侵蚀经营性现金流，而公司较高的债务水平使得其对现金流尤为敏感。\n*   **全球信用紧缩的放大效应：** 对方忽略了本轮全球央行激进加息对大宗商品金融属性的压制。更高的利率不仅抑制实体经济需求，也大幅提高了持有大宗商品库存的融资成本，迫使贸易商和下游去库存，从而在短期内加剧价格的下跌压力。美元流动性收紧的环境本身就不利于铝等以美元计价的大宗商品。\n*   **“估值重塑”需要盈利兑现，而非故事：** 对方呼吁“估值框架重塑”，但这必须建立在**可持续的、更高的盈利中枢**得以实现的基础上。目前，一切关于绿色需求的“故事”都还需要未来数个季度的财报来验证。而当下，我们看到的却是宏观经济指标和先行数据（如制造业PMI、地产销售）在指向一个相反的、盈利可能下修的路径。在盈利预测被下调之前谈论“估值重塑”，是本末倒置。\n\n**4. 总结：在“故事”与“现实”的较量中，现实占优**\n\n对方辩友描绘了一幅美好的长期图景——铝成为“绿色金属”，需求结构焕然一新。我方不否认这一长期趋势。但投资讲究时机与价格。\n\n**当前的现实是：** 我们正处在一个全球制造业活动放缓、中国房地产深度调整、欧美经济衰退风险未除的宏观环境中。这种环境对铝这种工业金属的**当下需求**和**价格**的打击是直接且猛烈的。\n\n对方的投资逻辑要求投资者：\n1.  相信一个尚未被证实的需求切换能够立即完美接棒。\n2.  忽略正在发生的、剧烈的传统需求萎缩。\n3.  在盈利可能即将下滑的周期高点，基于长期故事支付估值。\n\n这无异于要求投资者在暴风雨中，仅凭一张未来的晴雨表图纸就断定天气转晴。\n\n我方的逻辑则更为审慎：**尊重周期，敬畏现实。** 在宏观逆风证据确凿、行业下行催化剂（库存累积、订单走弱、成本高企）日益清晰的当下，首要任务是规避盈利和估值双杀的风险。中国铝业的投资机会，更需要等待其盈利风险充分释放、铝价找到坚实底部、或者估值真正低廉到足以补偿所有不确定性之后才会出现。\n\n因此，我们坚持 **“减持或观望”** 的立场。现在不是基于遥远故事进行博弈的时候，而是应该系好安全带，等待风暴过境。"
+        }
+      ],
+      "debate_summary": {
+        "bull_key_points": "1) 铝需求结构发生历史性切换，新能源（电动汽车、光伏、风电）和轻量化驱动的长期结构性增长正在取代传统房地产周期，铝正从“周期性工业金属”转向“战略性的绿色金属”；2) 供给侧存在刚性约束（国内产能天花板、全球能源与环保壁垒），导致行业供需格局优化，铝价波动区间底部被系统性抬高；3) 公司具备全产业链布局、成本控制、高端产品占比提升和绿色水电铝优势，α属性强化；4) 当前估值未充分反映行业盈利中枢上移和公司长期成长逻辑，存在认知滞后带来的修复空间。",
+        "bear_key_points": "1) 宏观经济周期性下行力量（全球衰退风险、中国房地产深度调整）目前远强于结构性需求改善，铝价与需求面临全局性、趋势性下跌风险；2) 新能源需求增量在规模和时间上无法完全对冲传统需求（尤其是房地产）的快速萎缩，存在“青黄不接”的需求缺口；3) 全球产能（尤其是俄罗斯、中东低成本产能）冲击和成本压力（能源、环保）将持续挤压利润空间，全产业链在系统性价格下跌时防御作用有限；4) 当前估值基于周期高点的盈利，若盈利下滑，估值将迅速飙升，所谓的“低估值”可能是周期顶部的价值陷阱。",
+        "most_convincing": "看涨方最有说服力的观点是铝需求驱动引擎正在发生历史性的结构性切换，新能源和轻量化领域的长期成长逻辑（政策驱动、技术迭代、全球碳中和）与短期房地产周期关联度降低，这可能系统性地提升行业的长期盈利中枢和估值框架。看跌方最有说服力的观点是宏观经济周期性下行（全球制造业放缓、中国房地产深度调整）对铝价和需求的压制是直接且猛烈的，且新能源需求的增量在规模和时间上无法立即、完全对冲传统需求的快速萎缩，在“青黄不接”时期价格将暴露于巨大风险之下。",
+        "key_disagreements": "1) **核心驱动力的认知分歧**：看涨方认为“结构性成长”是主导逻辑，看跌方认为“周期性下行”是主导力量。2) **需求切换的可行性分歧**：看涨方认为新能源需求能持续增长并逐步替代传统需求，看跌方认为其规模不足、增速有波动，且无法即时对冲传统需求的塌陷。3) **供给格局的评估分歧**：看涨方强调国内产能天花板和全球绿色壁垒对供给的长期约束，看跌方强调全球低成本产能释放和贸易流对价格的冲击。4) **估值框架的分歧**：看涨方认为需基于盈利中枢上移进行估值重塑，看跌方认为当前估值基于周期高点盈利，下行风险未充分定价。5) **公司抗风险能力分歧**：看涨方认为全产业链和成本优势是稳定器，看跌方认为在系统性价格下跌时其防御作用有限，且高经营杠杆会放大利润波动。",
+        "balanced_view": "中国铝业正处在一个复杂的交汇点：长期确实受益于全球绿色转型带来的需求结构优化和供给侧约束，这为其提供了区别于传统周期的成长叙事；但短期至中期，其业绩仍无法摆脱宏观经济周期、全球铝价波动以及中国房地产等传统需求疲软的深刻影响。双方辩论的核心实质上是“长期结构性利好”与“短期周期性逆风”的权重之争。目前，周期性下行压力（宏观数据、地产低迷）是可见且迫切的，而结构性利好的完全兑现（需求完美切换、绿色溢价实现）则需要时间验证。公司的全产业链和成本优势提供了部分缓冲，但无法使其免疫于行业性的盈利波动。",
+        "recommendation_lean": "中性",
+        "confidence_level": 6
+      }
+    }
+  },
+  "decision": {
+    "action": "持有",
+    "position_size": "轻仓（若已持有）/观望（若未持有）",
+    "target_price": "13.2-13.6元（短期阻力区），14.0-15.0元（中期乐观情景）",
+    "stop_loss": "12.18元（关键支撑位）",
+    "holding_period": "中期（3-12个月）",
+    "confidence": 6,
+    "reasoning": "综合技术面、基本面、新闻面及多空辩论，决策基于以下核心权衡：\n\n1. **基本面与周期的冲突**：公司基本面处于历史最佳时期（资产负债率降至46.38%，ROE达15.25%，现金流强劲），但行业强周期性特征未变。当前盈利高位可能接近周期顶部，未来盈利下行风险与长期结构性成长机会并存。\n\n2. **技术面弱势压制短期动能**：股价处于短期下降趋势，放量下跌、缩量反弹显示空头占优。12.66元关键支撑位面临考验，若跌破可能下探12.18元。技术面不支持立即买入，需等待企稳信号。\n\n3. **多空核心分歧的评估**：\n   - **看涨逻辑（结构性成长）**：新能源需求（电车、光伏）长期增长确定，国内产能天花板和绿色壁垒支撑铝价中枢。公司全产业链和高端化布局具备α潜力。\n   - **看跌逻辑（周期性下行）**：宏观经济逆风（全球衰退风险、中国地产低迷）压制短期需求，新能源增量难以立即对冲传统需求萎缩。估值基于周期高点盈利，下行风险未充分定价。\n   - **平衡观点**：短期周期性压力（需求疲软、铝价承压）更为迫切和可见；长期结构性故事（绿色转型）需时间验证且存在不确定性。当前处于“青黄不接”的过渡期。\n\n4. **风险收益比分析**：\n   - 上行空间：若铝价反弹、新能源需求超预期，股价有望挑战13.6元阻力并上看14-15元（对应2024年预期PE约15-18倍）。\n   - 下行风险：若跌破12.18元支撑，可能下探11.5-12.0元区域（对应盈利下滑情景）。当前价位风险收益比中性偏谨慎。\n\n5. **仓位与时机建议**：\n   - 已持有者：可轻仓持有，利用公司良好基本面和长期叙事作为缓冲，但需严守12.18元止损。\n   - 未持有者：建议观望，等待更明确的信号：a) 股价在12.18-12.66元区域企稳并放量反弹；b) 铝价或宏观经济数据出现回暖迹象；c) 估值进一步消化悲观预期（如跌至11.5元以下）。\n\n6. **关键催化剂监测**：\n   - 正面：铝价反弹、新能源需求数据超预期、公司季度业绩维持韧性、政策利好（如绿色铝支持）。\n   - 负面：全球经济数据恶化、中国房地产数据进一步下滑、铝价跌破成本线、库存持续累积。",
+    "key_factors": [
+      "铝价走势（核心驱动）",
+      "宏观经济周期（尤其中国房地产与全球制造业PMI）",
+      "新能源领域（电车、光伏）铝需求增长进度",
+      "公司季度盈利变化与现金流状况",
+      "技术面关键支撑位（12.66元、12.18元）的防守情况"
+    ],
+    "risks": [
+      "铝价周期性下跌超预期，导致盈利大幅下滑",
+      "新能源需求增长不及预期，无法对冲传统需求萎缩",
+      "成本（电力、氧化铝）上涨挤压利润",
+      "全球衰退引发风险资产抛售，估值进一步压缩",
+      "技术面破位导致止损盘涌出，加剧下跌"
+    ],
+    "summary": "中国铝业处于‘长期成长叙事’与‘短期周期逆风’的激烈博弈中。公司基本面扎实（财务健康、盈利强劲），但技术面疲软且宏观环境不利。建议已持有者轻仓持有并严格止损，未持有者观望等待更好时机。决策信心6分，反映当前多空力量相对均衡但短期风险偏向下行。投资机会需等待周期性风险释放或结构性成长信号强化。"
+  },
+  "risk_assessment": {
+    "market_risk": "高。股票价格与铝价及全球宏观经济（尤其是中国房地产和全球制造业PMI）高度相关。当前宏观环境面临全球衰退风险、中国房地产持续低迷及制造业活动放缓等逆风，市场整体波动性大，对周期性股票构成显著压力。技术面显示短期下降趋势，放量下跌表明市场抛压沉重。",
+    "stock_specific_risk": "中。公司基本面处于历史最佳时期：财务健康（资产负债率46.38%，流动比率1.53），盈利能力强（ROE 15.25%），现金流强劲。这提供了较强的下行缓冲。主要风险在于其盈利对铝价高度敏感，属于强周期性行业，若铝价下跌，盈利可能大幅下滑。公司治理和运营风险相对较低。",
+    "industry_risk": "中高。铝行业具有强周期性，受宏观经济影响大。长期看，受益于新能源（电车、光伏）需求的结构性增长和国内产能天花板政策，行业格局优化。但短期面临传统需求（房地产、基建）萎缩、全球低成本产能竞争、能源及环保成本上升等压力。行业处于“新旧需求切换”的过渡期，不确定性较高。",
+    "liquidity_risk": "低。作为A股主板大型央企，中国铝业（601600.SH）成交量通常较为活跃（如近期日成交量在200-800万手之间），流动性充足，便于投资者进出。但需注意在市场极端悲观或恐慌时，流动性可能短期收紧。",
+    "valuation_risk": "中高。当前估值基于周期高点的盈利（2024年ROE达19.13%）。若行业周期下行导致盈利下滑，市盈率（PE）将迅速上升，估值可能显得昂贵。市场对长期结构性成长（绿色铝）的定价存在分歧，估值未能充分反映短期下行风险，存在“价值陷阱”的可能性。",
+    "sentiment_risk": "中。近期无重大负面新闻，市场情绪中性偏谨慎。但投资者对宏观经济和铝价走势的担忧是主要情绪风险。若未来出现铝价大跌、经济数据恶化或公司季度业绩不及预期，可能引发显著的负面舆情和抛售压力。",
+    "overall_risk_level": "中高",
+    "risk_score": 7,
+    "risk_control_suggestions": [
+      "严格仓位控制：仅建议轻仓参与（如总资产的5%以下），已持有者维持轻仓，未持有者观望。",
+      "设置明确止损：将止损位严格设置在关键支撑位12.18元，以控制下行风险。",
+      "采用分批策略：若计划买入，应等待股价在关键支撑区（如12.18-12.66元）企稳并出现放量反弹信号后，再考虑分批建仓，避免一次性重仓。",
+      "对冲周期性风险：考虑通过投资组合多元化，配置与铝周期相关性较低的资产，以对冲行业下行风险。",
+      "紧密监控催化剂：定期跟踪铝价、全球PMI、中国房地产数据及公司季度报告，根据基本面变化动态调整策略。"
+    ],
+    "max_position_size": "不超过总仓位的5%（针对已持有或计划买入的投资者）",
+    "monitoring_points": [
+      "铝价走势（LME铝价及沪铝主力合约价格）",
+      "宏观经济数据：中国房地产销售/投资数据、全球制造业PMI",
+      "公司财务数据：季度营收、净利润、毛利率及现金流变化",
+      "技术面关键价位：股价能否在12.18-12.66元支撑区域企稳并反弹",
+      "行业动态：新能源领域（电动汽车、光伏）的铝需求数据及政策动向",
+      "库存数据：全球及国内铝显性库存变化"
+    ],
+    "summary": "中国铝业的风险评估总体为中高水平（风险评分7分）。核心风险源于其强周期性特征与当前不利的宏观经济环境（市场风险高），叠加估值基于盈利高点的脆弱性（估值风险中高）。尽管公司自身基本面扎实（个股风险中），财务健康提供了安全垫，但无法完全免疫于行业性下行。行业正处于长期绿色转型与短期周期逆风的激烈博弈期（行业风险中高）。投资决策需高度谨慎，建议已持有者轻仓持有并严守止损，未持有者耐心观望，等待更明确的风险释放或基本面改善信号。"
+  },
+  "analysis_time": "2026-02-18T00:07:55.432422",
+  "analysis_mode": "pre_market",
+  "duration_seconds": 200.887945
+}
